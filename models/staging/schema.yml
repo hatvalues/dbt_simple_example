@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_pipedrive__activity
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: activity_type
+        tests:
+          - relationships:
+              to: ref('stg_pipedrive__activity_types')
+              field: activity_type
+      - name: user_id
+        tests:
+          - relationships:
+              to: ref('stg_pipedrive__users')
+              field: id
+      - name: deal_id
+        tests:
+          - not_null
+      - name: is_done
+        tests:
+          - not_null
+      - name: due_date
+        tests:
+          - not_null
