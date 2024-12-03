@@ -25,3 +25,17 @@ models:
       - name: due_date
         tests:
           - not_null
+  - name: stg_pipedrive__deal_changes
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: change_time
+        tests:
+          - not_null
+      - name: changed_field_key
+        tests:
+          - not_null
+      - name: new_value
+        tests:
+          - not_null
