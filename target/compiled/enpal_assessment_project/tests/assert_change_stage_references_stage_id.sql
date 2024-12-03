@@ -6,6 +6,6 @@ WITH deal_change_stage AS (
 )
 SELECT *
 FROM deal_change_stage d
-LEFT OUTER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages" s
+LEFT OUTER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__fields_stages" s
 ON CAST(d.new_value AS INTEGER) = s.id
 WHERE s.id IS NULL -- Any non referential values in d will return a NULL s.id
