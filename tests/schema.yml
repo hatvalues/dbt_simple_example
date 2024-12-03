@@ -1,0 +1,5 @@
+version: 2
+data_tests:
+  - name: assert_change_stage_references_stage_id
+    description: >
+      When the deal_changes.changed_field_key is 'stage_id', the new_value must reference a valid stages.id
