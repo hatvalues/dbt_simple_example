@@ -40,3 +40,18 @@ models:
       - name: new_value
         tests:
           - not_null
+  - name: stg_pipedrive__users
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: user_name
+        tests:
+          - not_null
+      - name: user_email
+        tests:
+          - not_null
+      - name: modified_date
+        tests:
+          - not_null
+      
