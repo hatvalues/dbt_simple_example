@@ -6,3 +6,8 @@ sources:
     schema: public
     tables:
       - name: activity
+      - name: deal_changes
+      - name: activity_types
+      - name: fields
+      - name: stages
+      - name: users
