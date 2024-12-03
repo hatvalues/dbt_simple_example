@@ -1,0 +1,1053 @@
+[0m11:52:22.630116 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10faa7b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fc4f1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fc4ec90>]}
+
+
+============================== 11:52:22.638218 | f8b467e8-235b-450f-a31b-8d7882bbffa3 ==============================
+[0m11:52:22.638218 [info ] [MainThread]: Running with dbt=1.8.9
+[0m11:52:22.639065 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:52:26.132339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11019a0f0>]}
+[0m11:52:26.201110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f631c70>]}
+[0m11:52:26.202348 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m11:52:26.350821 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m11:52:26.444503 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m11:52:26.445074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110994620>]}
+[0m11:52:27.617380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b71940>]}
+[0m11:52:27.723471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110c47d70>]}
+[0m11:52:27.724139 [info ] [MainThread]: Found 1 model, 1 source, 428 macros
+[0m11:52:27.724618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f8b467e8-235b-450f-a31b-8d7882bbffa3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110240470>]}
+[0m11:52:27.726962 [info ] [MainThread]: 
+[0m11:52:27.727713 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:52:27.728713 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m11:52:27.804128 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m11:52:27.804630 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:52:27.805018 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:52:27.848152 [debug] [ThreadPool]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "admin" does not exist
+
+[0m11:52:27.853696 [debug] [ThreadPool]: Postgres adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:52:27.854471 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m11:52:27.855247 [debug] [ThreadPool]: Postgres adapter: Error running SQL: macro list_schemas
+[0m11:52:27.855828 [debug] [ThreadPool]: Postgres adapter: Rolling back transaction.
+[0m11:52:27.856347 [debug] [ThreadPool]: On list_postgres: No close available on handle
+[0m11:52:27.857371 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:52:27.857890 [debug] [MainThread]: Connection 'list_postgres' was properly closed.
+[0m11:52:27.858326 [info ] [MainThread]: 
+[0m11:52:27.858893 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.13 seconds (0.13s).
+[0m11:52:27.859564 [error] [MainThread]: Encountered an error:
+Database Error
+  connection to server at "localhost" (::1), port 5432 failed: FATAL:  role "admin" does not exist
+  
+[0m11:52:27.862989 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.329828, "process_in_blocks": "0", "process_kernel_time": 0.489448, "process_mem_max_rss": "110206976", "process_out_blocks": "0", "process_user_time": 3.364888}
+[0m11:52:27.863974 [debug] [MainThread]: Command `dbt run` failed at 11:52:27.863770 after 5.33 seconds
+[0m11:52:27.864753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf5ad50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110241e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110b2fa10>]}
+[0m11:52:27.865773 [debug] [MainThread]: Flushing usage events
+[0m12:55:58.411157 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bbd18b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfeaf90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfeaab0>]}
+
+
+============================== 12:55:58.418376 | 6a40284e-adec-40b7-b59b-3847d96197e7 ==============================
+[0m12:55:58.418376 [info ] [MainThread]: Running with dbt=1.8.9
+[0m12:55:58.419187 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:55:58.711489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae8c5f0>]}
+[0m12:55:58.780178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0b5be0>]}
+[0m12:55:58.781300 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m12:55:58.930822 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m12:55:59.075923 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:55:59.076439 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:55:59.116542 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c5c7cb0>]}
+[0m12:55:59.226019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc96420>]}
+[0m12:55:59.226608 [info ] [MainThread]: Found 1 model, 1 source, 428 macros
+[0m12:55:59.227042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c54ccb0>]}
+[0m12:55:59.229713 [info ] [MainThread]: 
+[0m12:55:59.230587 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m12:55:59.231813 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m12:55:59.313486 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m12:55:59.313973 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m12:55:59.314356 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:55:59.372047 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.058 seconds
+[0m12:55:59.374306 [debug] [ThreadPool]: On list_postgres: Close
+[0m12:55:59.375323 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now create_postgres_public_pipedrive_analytics)
+[0m12:55:59.375940 [debug] [ThreadPool]: Creating schema "database: "postgres"
+schema: "public_pipedrive_analytics"
+"
+[0m12:55:59.382468 [debug] [ThreadPool]: Using postgres connection "create_postgres_public_pipedrive_analytics"
+[0m12:55:59.382911 [debug] [ThreadPool]: On create_postgres_public_pipedrive_analytics: BEGIN
+[0m12:55:59.383326 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:55:59.399805 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m12:55:59.400530 [debug] [ThreadPool]: Using postgres connection "create_postgres_public_pipedrive_analytics"
+[0m12:55:59.400934 [debug] [ThreadPool]: On create_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "create_postgres_public_pipedrive_analytics"} */
+create schema if not exists "public_pipedrive_analytics"
+[0m12:55:59.402958 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.002 seconds
+[0m12:55:59.404159 [debug] [ThreadPool]: On create_postgres_public_pipedrive_analytics: COMMIT
+[0m12:55:59.404557 [debug] [ThreadPool]: Using postgres connection "create_postgres_public_pipedrive_analytics"
+[0m12:55:59.404915 [debug] [ThreadPool]: On create_postgres_public_pipedrive_analytics: COMMIT
+[0m12:55:59.406961 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m12:55:59.407476 [debug] [ThreadPool]: On create_postgres_public_pipedrive_analytics: Close
+[0m12:55:59.408849 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_postgres_public_pipedrive_analytics, now list_postgres_public_pipedrive_analytics)
+[0m12:55:59.415989 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m12:55:59.416465 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m12:55:59.416822 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:55:59.434390 [debug] [ThreadPool]: SQL status: BEGIN in 0.017 seconds
+[0m12:55:59.434960 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m12:55:59.435438 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m12:55:59.440278 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.004 seconds
+[0m12:55:59.442429 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m12:55:59.444129 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m12:55:59.449501 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.449956 [debug] [MainThread]: On master: BEGIN
+[0m12:55:59.450292 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:55:59.467480 [debug] [MainThread]: SQL status: BEGIN in 0.017 seconds
+[0m12:55:59.468051 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.468585 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m12:55:59.473594 [debug] [MainThread]: SQL status: SELECT 0 in 0.004 seconds
+[0m12:55:59.475031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cdd9520>]}
+[0m12:55:59.475580 [debug] [MainThread]: On master: ROLLBACK
+[0m12:55:59.476970 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.477453 [debug] [MainThread]: On master: BEGIN
+[0m12:55:59.479778 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m12:55:59.480629 [debug] [MainThread]: On master: COMMIT
+[0m12:55:59.481116 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.481525 [debug] [MainThread]: On master: COMMIT
+[0m12:55:59.482914 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m12:55:59.483417 [debug] [MainThread]: On master: Close
+[0m12:55:59.483976 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:55:59.484577 [info ] [MainThread]: 
+[0m12:55:59.487964 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.test_model
+[0m12:55:59.488631 [info ] [Thread-1 (]: 1 of 1 START sql table model public_pipedrive_analytics.test_model ............. [RUN]
+[0m12:55:59.489210 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.test_model)
+[0m12:55:59.489652 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.test_model
+[0m12:55:59.498999 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.test_model"
+[0m12:55:59.500496 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.test_model
+[0m12:55:59.551206 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.test_model"
+[0m12:55:59.552074 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.test_model"
+[0m12:55:59.552517 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: BEGIN
+[0m12:55:59.552917 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:55:59.570015 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m12:55:59.570849 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.test_model"
+[0m12:55:59.571348 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.test_model"} */
+
+  
+    
+
+  create  table "postgres"."public_pipedrive_analytics"."test_model__dbt_tmp"
+  
+  
+    as
+  
+  (
+    SELECT *
+FROM "postgres"."public"."activity"
+  );
+  
+[0m12:55:59.577003 [debug] [Thread-1 (]: SQL status: SELECT 4579 in 0.005 seconds
+[0m12:55:59.584423 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.test_model"
+[0m12:55:59.584917 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.test_model"} */
+alter table "postgres"."public_pipedrive_analytics"."test_model__dbt_tmp" rename to "test_model"
+[0m12:55:59.587208 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m12:55:59.608597 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: COMMIT
+[0m12:55:59.609093 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.test_model"
+[0m12:55:59.609546 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: COMMIT
+[0m12:55:59.612628 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m12:55:59.619575 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."test_model__dbt_backup"
+[0m12:55:59.625852 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.test_model"
+[0m12:55:59.626365 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.test_model"} */
+drop table if exists "postgres"."public_pipedrive_analytics"."test_model__dbt_backup" cascade
+[0m12:55:59.629828 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.003 seconds
+[0m12:55:59.633338 [debug] [Thread-1 (]: On model.enpal_assessment_project.test_model: Close
+[0m12:55:59.636224 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6a40284e-adec-40b7-b59b-3847d96197e7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a895670>]}
+[0m12:55:59.637053 [info ] [Thread-1 (]: 1 of 1 OK created sql table model public_pipedrive_analytics.test_model ........ [[32mSELECT 4579[0m in 0.14s]
+[0m12:55:59.638386 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.test_model
+[0m12:55:59.640021 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.640485 [debug] [MainThread]: On master: BEGIN
+[0m12:55:59.640842 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:55:59.660541 [debug] [MainThread]: SQL status: BEGIN in 0.020 seconds
+[0m12:55:59.661444 [debug] [MainThread]: On master: COMMIT
+[0m12:55:59.661924 [debug] [MainThread]: Using postgres connection "master"
+[0m12:55:59.662336 [debug] [MainThread]: On master: COMMIT
+[0m12:55:59.663774 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m12:55:59.664220 [debug] [MainThread]: On master: Close
+[0m12:55:59.664734 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:55:59.665140 [debug] [MainThread]: Connection 'model.enpal_assessment_project.test_model' was properly closed.
+[0m12:55:59.665535 [info ] [MainThread]: 
+[0m12:55:59.665961 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.44 seconds (0.44s).
+[0m12:55:59.666853 [debug] [MainThread]: Command end result
+[0m12:55:59.695700 [info ] [MainThread]: 
+[0m12:55:59.696296 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:55:59.696710 [info ] [MainThread]: 
+[0m12:55:59.697132 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m12:55:59.700128 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3831896, "process_in_blocks": "0", "process_kernel_time": 0.485808, "process_mem_max_rss": "107806720", "process_out_blocks": "0", "process_user_time": 2.499511}
+[0m12:55:59.700902 [debug] [MainThread]: Command `dbt run` succeeded at 12:55:59.700754 after 1.38 seconds
+[0m12:55:59.701590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfa9c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0b69c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a9c4c20>]}
+[0m12:55:59.702129 [debug] [MainThread]: Flushing usage events
+[0m13:14:08.015059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1a6210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3431a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e342c90>]}
+
+
+============================== 13:14:08.023372 | df80fca9-dd5a-4ac1-8ba2-7b6fdb796164 ==============================
+[0m13:14:08.023372 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:14:08.024948 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt test', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:14:08.312570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df80fca9-dd5a-4ac1-8ba2-7b6fdb796164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e80e120>]}
+[0m13:14:08.378576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df80fca9-dd5a-4ac1-8ba2-7b6fdb796164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e20d3a0>]}
+[0m13:14:08.380498 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:14:08.521484 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:14:08.670215 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:14:08.670788 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:14:08.709317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df80fca9-dd5a-4ac1-8ba2-7b6fdb796164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e938140>]}
+[0m13:14:08.837178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df80fca9-dd5a-4ac1-8ba2-7b6fdb796164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f2ff470>]}
+[0m13:14:08.837889 [info ] [MainThread]: Found 1 model, 1 source, 428 macros
+[0m13:14:08.838398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df80fca9-dd5a-4ac1-8ba2-7b6fdb796164', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f133650>]}
+[0m13:14:08.840923 [info ] [MainThread]: 
+[0m13:14:08.841443 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:14:08.843599 [debug] [MainThread]: Command end result
+[0m13:14:08.872064 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.9457402, "process_in_blocks": "0", "process_kernel_time": 0.486952, "process_mem_max_rss": "102731776", "process_out_blocks": "0", "process_user_time": 2.363084}
+[0m13:14:08.872926 [debug] [MainThread]: Command `dbt test` succeeded at 13:14:08.872783 after 0.95 seconds
+[0m13:14:08.873418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6bed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dde0980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1a6210>]}
+[0m13:14:08.873853 [debug] [MainThread]: Flushing usage events
+[0m13:31:53.986233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a5b920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10801b440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10801af30>]}
+
+
+============================== 13:31:53.995665 | 136c4155-7088-4107-99b6-f3d45e4548a6 ==============================
+[0m13:31:53.995665 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:31:53.997022 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'version_check': 'True', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:31:54.283372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '136c4155-7088-4107-99b6-f3d45e4548a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107661100>]}
+[0m13:31:54.348879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '136c4155-7088-4107-99b6-f3d45e4548a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074b9730>]}
+[0m13:31:54.350827 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:31:54.495029 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:31:54.634153 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m13:31:54.634702 [debug] [MainThread]: Partial parsing: deleted file: enpal_assessment_project://models/test_model.sql
+[0m13:31:54.686881 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.enpal_assessment_project
+[0m13:31:54.704077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '136c4155-7088-4107-99b6-f3d45e4548a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108611490>]}
+[0m13:31:54.798150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '136c4155-7088-4107-99b6-f3d45e4548a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e35ca0>]}
+[0m13:31:54.798777 [info ] [MainThread]: Found 1 source, 428 macros
+[0m13:31:54.799197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '136c4155-7088-4107-99b6-f3d45e4548a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1086109b0>]}
+[0m13:31:54.801260 [info ] [MainThread]: 
+[0m13:31:54.801710 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:31:54.803788 [debug] [MainThread]: Command end result
+[0m13:31:54.830063 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.94013536, "process_in_blocks": "0", "process_kernel_time": 0.472724, "process_mem_max_rss": "100003840", "process_out_blocks": "0", "process_user_time": 2.342559}
+[0m13:31:54.830991 [debug] [MainThread]: Command `dbt run` succeeded at 13:31:54.830801 after 0.94 seconds
+[0m13:31:54.831753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107aac620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ca2f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1085fad50>]}
+[0m13:31:54.832269 [debug] [MainThread]: Flushing usage events
+[0m13:32:36.553130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103985160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e3b200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e3ad20>]}
+
+
+============================== 13:32:36.558306 | d843b4c3-e05a-4740-83de-09ec147864ed ==============================
+[0m13:32:36.558306 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:32:36.559191 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:32:36.798133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd843b4c3-e05a-4740-83de-09ec147864ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103875610>]}
+[0m13:32:36.865123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd843b4c3-e05a-4740-83de-09ec147864ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102ebc200>]}
+[0m13:32:36.866058 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:32:36.996090 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:32:37.092999 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m13:32:37.093440 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m13:32:37.094014 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.enpal_assessment_project
+[0m13:32:37.109098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd843b4c3-e05a-4740-83de-09ec147864ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10452c080>]}
+[0m13:32:37.190383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd843b4c3-e05a-4740-83de-09ec147864ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c34b30>]}
+[0m13:32:37.191032 [info ] [MainThread]: Found 1 source, 428 macros
+[0m13:32:37.191453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd843b4c3-e05a-4740-83de-09ec147864ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b238f0>]}
+[0m13:32:37.193698 [info ] [MainThread]: 
+[0m13:32:37.194292 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m13:32:37.196491 [debug] [MainThread]: Command end result
+[0m13:32:37.222443 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.75012475, "process_in_blocks": "0", "process_kernel_time": 0.326546, "process_mem_max_rss": "99532800", "process_out_blocks": "0", "process_user_time": 2.050174}
+[0m13:32:37.223357 [debug] [MainThread]: Command `dbt run` succeeded at 13:32:37.223208 after 0.75 seconds
+[0m13:32:37.223926 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103a218e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10441fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10452cb60>]}
+[0m13:32:37.224398 [debug] [MainThread]: Flushing usage events
+[0m13:44:22.967867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c52b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf7ac60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cf7a9c0>]}
+
+
+============================== 13:44:22.976647 | 248688b9-d91e-4cc4-bfb4-fa7849cc372c ==============================
+[0m13:44:22.976647 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:44:22.977803 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:23.269145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b826930>]}
+[0m13:44:23.337660 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce66540>]}
+[0m13:44:23.339259 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:44:23.484477 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:44:23.552621 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m13:44:23.553193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c528b90>]}
+[0m13:44:24.779181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c528d40>]}
+[0m13:44:24.894990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de57fe0>]}
+[0m13:44:24.895549 [info ] [MainThread]: Found 1 model, 1 source, 428 macros
+[0m13:44:24.896046 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d046960>]}
+[0m13:44:24.898562 [info ] [MainThread]: 
+[0m13:44:24.899544 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:44:24.901148 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m13:44:24.980261 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m13:44:24.980733 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:44:24.981098 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:44:25.047673 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.066 seconds
+[0m13:44:25.049287 [debug] [ThreadPool]: On list_postgres: Close
+[0m13:44:25.050756 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_pipedrive_analytics)
+[0m13:44:25.057611 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m13:44:25.058059 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m13:44:25.058394 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:44:25.074522 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m13:44:25.075022 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m13:44:25.075556 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m13:44:25.079455 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.003 seconds
+[0m13:44:25.080955 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m13:44:25.082185 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m13:44:25.087245 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.087714 [debug] [MainThread]: On master: BEGIN
+[0m13:44:25.088052 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:44:25.103612 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m13:44:25.104108 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.104608 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:44:25.109838 [debug] [MainThread]: SQL status: SELECT 0 in 0.005 seconds
+[0m13:44:25.111203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df6de80>]}
+[0m13:44:25.111689 [debug] [MainThread]: On master: ROLLBACK
+[0m13:44:25.112911 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.113303 [debug] [MainThread]: On master: BEGIN
+[0m13:44:25.115100 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m13:44:25.115698 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.116258 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.116667 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.117929 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m13:44:25.118354 [debug] [MainThread]: On master: Close
+[0m13:44:25.118890 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:44:25.119320 [info ] [MainThread]: 
+[0m13:44:25.122695 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:44:25.123362 [info ] [Thread-1 (]: 1 of 1 START sql view model public_pipedrive_analytics.stg_pipedrive__activity . [RUN]
+[0m13:44:25.123918 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.stg_pipedrive__activity)
+[0m13:44:25.124349 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:44:25.133251 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.135343 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:44:25.182202 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.183254 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.183775 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: BEGIN
+[0m13:44:25.184235 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:44:25.200869 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m13:44:25.201544 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.202030 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."activity"
+  );
+[0m13:44:25.205863 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m13:44:25.212951 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.213446 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp" rename to "stg_pipedrive__activity"
+[0m13:44:25.215050 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:44:25.231617 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m13:44:25.232123 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.232533 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m13:44:25.234940 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m13:44:25.241754 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup"
+[0m13:44:25.247553 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:44:25.248054 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup" cascade
+[0m13:44:25.249854 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:44:25.252731 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: Close
+[0m13:44:25.254507 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '248688b9-d91e-4cc4-bfb4-fa7849cc372c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dfa66c0>]}
+[0m13:44:25.255313 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity  [[32mCREATE VIEW[0m in 0.13s]
+[0m13:44:25.256228 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:44:25.257848 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.258351 [debug] [MainThread]: On master: BEGIN
+[0m13:44:25.258874 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:44:25.277182 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m13:44:25.277846 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.278265 [debug] [MainThread]: Using postgres connection "master"
+[0m13:44:25.278619 [debug] [MainThread]: On master: COMMIT
+[0m13:44:25.279790 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m13:44:25.280209 [debug] [MainThread]: On master: Close
+[0m13:44:25.280734 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:44:25.281095 [debug] [MainThread]: Connection 'model.enpal_assessment_project.stg_pipedrive__activity' was properly closed.
+[0m13:44:25.281494 [info ] [MainThread]: 
+[0m13:44:25.281922 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m13:44:25.282857 [debug] [MainThread]: Command end result
+[0m13:44:25.371713 [info ] [MainThread]: 
+[0m13:44:25.372272 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:44:25.372666 [info ] [MainThread]: 
+[0m13:44:25.373081 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m13:44:25.376234 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.5042033, "process_in_blocks": "0", "process_kernel_time": 0.508846, "process_mem_max_rss": "112644096", "process_out_blocks": "0", "process_user_time": 3.644893}
+[0m13:44:25.376926 [debug] [MainThread]: Command `dbt run` succeeded at 13:44:25.376796 after 2.51 seconds
+[0m13:44:25.377375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c3898e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10accd070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce678f0>]}
+[0m13:44:25.377787 [debug] [MainThread]: Flushing usage events
+[0m13:53:27.739438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f81ffe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1105db110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1105dac30>]}
+
+
+============================== 13:53:27.747317 | cae1f26e-73fe-4bd7-bf31-9d6a5dc24017 ==============================
+[0m13:53:27.747317 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:53:27.748073 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:53:28.035746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cae1f26e-73fe-4bd7-bf31-9d6a5dc24017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f4785c0>]}
+[0m13:53:28.100754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cae1f26e-73fe-4bd7-bf31-9d6a5dc24017', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ea164e0>]}
+[0m13:53:28.102689 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:53:28.250085 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:53:28.397473 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m13:53:28.398194 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__fields.sql
+[0m13:53:28.398686 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__deal_changes.sql
+[0m13:53:28.399151 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m13:53:28.399557 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__activity_types.sql
+[0m13:53:28.399961 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__users.sql
+[0m13:53:28.618700 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.enpal_assessment_project.stg_pipedrive__fields' (models/staging/stg_pipedrive__fields.sql) depends on a source named 'postgres_public.fields' which was not found
+[0m13:53:28.621462 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.98127276, "process_in_blocks": "0", "process_kernel_time": 0.454799, "process_mem_max_rss": "98189312", "process_out_blocks": "0", "process_user_time": 2.345927}
+[0m13:53:28.622366 [debug] [MainThread]: Command `dbt run` failed at 13:53:28.622169 after 0.98 seconds
+[0m13:53:28.622905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c8fad50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ef860c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11140f650>]}
+[0m13:53:28.623425 [debug] [MainThread]: Flushing usage events
+[0m13:55:02.228531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a4fb5c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c09b170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c09ac60>]}
+
+
+============================== 13:55:02.236126 | df4df9a2-0147-455f-b8d4-e74ad03acb74 ==============================
+[0m13:55:02.236126 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:55:02.237180 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:55:02.513563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df4df9a2-0147-455f-b8d4-e74ad03acb74', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af401d0>]}
+[0m13:55:02.581092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df4df9a2-0147-455f-b8d4-e74ad03acb74', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a94a7e0>]}
+[0m13:55:02.582746 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:55:02.733263 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:55:02.876363 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m13:55:02.876976 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m13:55:02.877412 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__deal_changes.sql
+[0m13:55:02.877787 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__activity_types.sql
+[0m13:55:02.878158 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__fields.sql
+[0m13:55:02.878564 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__users.sql
+[0m13:55:03.104525 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.enpal_assessment_project.stg_pipedrive__stages' (models/staging/stg_pipedrive__stages.sql) depends on a source named 'postgres_public.stages' which was not found
+[0m13:55:03.108298 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.9772314, "process_in_blocks": "0", "process_kernel_time": 0.387069, "process_mem_max_rss": "98902016", "process_out_blocks": "0", "process_user_time": 2.246496}
+[0m13:55:03.109150 [debug] [MainThread]: Command `dbt run` failed at 13:55:03.108991 after 0.98 seconds
+[0m13:55:03.109674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083b6d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd2f2c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aefd7c0>]}
+[0m13:55:03.110354 [debug] [MainThread]: Flushing usage events
+[0m13:56:28.290961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ce545f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2bb170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d2bac60>]}
+
+
+============================== 13:56:28.299483 | 62a387d1-e3c4-45cc-9c6c-2d546eb34be0 ==============================
+[0m13:56:28.299483 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:56:28.300343 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m13:56:28.584717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '62a387d1-e3c4-45cc-9c6c-2d546eb34be0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d77e420>]}
+[0m13:56:28.654432 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '62a387d1-e3c4-45cc-9c6c-2d546eb34be0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b26ed20>]}
+[0m13:56:28.655800 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:56:28.810403 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:56:28.960249 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m13:56:28.960945 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__users.sql
+[0m13:56:28.961504 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m13:56:28.961943 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__activity_types.sql
+[0m13:56:28.962357 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__deal_changes.sql
+[0m13:56:29.175543 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.enpal_assessment_project.stg_pipedrive__users' (models/staging/stg_pipedrive__users.sql) depends on a source named 'postgres_public.users' which was not found
+[0m13:56:29.181585 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.9856079, "process_in_blocks": "0", "process_kernel_time": 0.459976, "process_mem_max_rss": "99012608", "process_out_blocks": "0", "process_user_time": 2.392054}
+[0m13:56:29.182497 [debug] [MainThread]: Command `dbt run` failed at 13:56:29.182329 after 0.99 seconds
+[0m13:56:29.183101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc7afc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcbddf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0bb260>]}
+[0m13:56:29.183726 [debug] [MainThread]: Flushing usage events
+[0m13:57:40.240487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7da570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e97b260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e97ad50>]}
+
+
+============================== 13:57:40.245939 | 6f9511cf-8784-4b01-b75d-54e09f187945 ==============================
+[0m13:57:40.245939 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:57:40.247209 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:57:40.483081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6f9511cf-8784-4b01-b75d-54e09f187945', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10eec6bd0>]}
+[0m13:57:40.552044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6f9511cf-8784-4b01-b75d-54e09f187945', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e353020>]}
+[0m13:57:40.553009 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:57:40.692523 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:57:40.811581 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 1 files changed.
+[0m13:57:40.812193 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__fields.sql
+[0m13:57:40.812603 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__users.sql
+[0m13:57:40.813065 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__deal_changes.sql
+[0m13:57:40.813501 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__activity_types.sql
+[0m13:57:40.813899 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m13:57:40.814472 [debug] [MainThread]: Partial parsing: updated file: enpal_assessment_project://models/sources.yml
+[0m13:57:41.131381 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.enpal_assessment_project.stg_pipedrive__activity_types' (models/staging/stg_pipedrive__activity_types.sql) depends on a source named 'postgres_public.activity_types' which was not found
+[0m13:57:41.133219 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.97407824, "process_in_blocks": "0", "process_kernel_time": 0.289983, "process_mem_max_rss": "100061184", "process_out_blocks": "0", "process_user_time": 2.203568}
+[0m13:57:41.133929 [debug] [MainThread]: Command `dbt run` failed at 13:57:41.133793 after 0.97 seconds
+[0m13:57:41.134414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e97aed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f84ce90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f84c920>]}
+[0m13:57:41.134853 [debug] [MainThread]: Flushing usage events
+[0m13:58:19.056907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad968d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10add72c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10add6d80>]}
+
+
+============================== 13:58:19.062281 | b5d4dc59-5d41-4df8-93e2-8a1906a0273f ==============================
+[0m13:58:19.062281 [info ] [MainThread]: Running with dbt=1.8.9
+[0m13:58:19.063333 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:58:19.294012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aeed3d0>]}
+[0m13:58:19.359049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c36750>]}
+[0m13:58:19.359966 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m13:58:19.489142 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m13:58:19.605078 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 1 files changed.
+[0m13:58:19.605689 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m13:58:19.606097 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__fields.sql
+[0m13:58:19.606482 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__users.sql
+[0m13:58:19.606866 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__deal_changes.sql
+[0m13:58:19.607247 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/stg_pipedrive__activity_types.sql
+[0m13:58:19.607808 [debug] [MainThread]: Partial parsing: updated file: enpal_assessment_project://models/sources.yml
+[0m13:58:19.994063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd268a0>]}
+[0m13:58:20.105443 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc28f50>]}
+[0m13:58:20.106014 [info ] [MainThread]: Found 6 models, 6 sources, 428 macros
+[0m13:58:20.106441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a864e60>]}
+[0m13:58:20.108891 [info ] [MainThread]: 
+[0m13:58:20.109651 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:58:20.114604 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m13:58:20.203517 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m13:58:20.203970 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m13:58:20.204337 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:58:20.258230 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.054 seconds
+[0m13:58:20.259873 [debug] [ThreadPool]: On list_postgres: Close
+[0m13:58:20.261538 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_pipedrive_analytics)
+[0m13:58:20.268413 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m13:58:20.268858 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m13:58:20.269199 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:58:20.285288 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m13:58:20.286027 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m13:58:20.286490 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m13:58:20.290429 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.003 seconds
+[0m13:58:20.291971 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m13:58:20.293190 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m13:58:20.298611 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.299052 [debug] [MainThread]: On master: BEGIN
+[0m13:58:20.299384 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:58:20.315033 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m13:58:20.315609 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.316116 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m13:58:20.321182 [debug] [MainThread]: SQL status: SELECT 1 in 0.005 seconds
+[0m13:58:20.322666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcccc20>]}
+[0m13:58:20.323157 [debug] [MainThread]: On master: ROLLBACK
+[0m13:58:20.324425 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.324837 [debug] [MainThread]: On master: BEGIN
+[0m13:58:20.326887 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m13:58:20.327418 [debug] [MainThread]: On master: COMMIT
+[0m13:58:20.327847 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.328195 [debug] [MainThread]: On master: COMMIT
+[0m13:58:20.329434 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.329828 [debug] [MainThread]: On master: Close
+[0m13:58:20.330460 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:58:20.330910 [info ] [MainThread]: 
+[0m13:58:20.333742 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:58:20.334436 [info ] [Thread-1 (]: 1 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity . [RUN]
+[0m13:58:20.335038 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.stg_pipedrive__activity)
+[0m13:58:20.335501 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:58:20.346654 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.348124 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:58:20.387232 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.388414 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.388945 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: BEGIN
+[0m13:58:20.389359 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.406350 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m13:58:20.407045 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.407530 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."activity"
+  );
+[0m13:58:20.410268 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:58:20.417504 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.418016 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity" rename to "stg_pipedrive__activity__dbt_backup"
+[0m13:58:20.419614 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.422988 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.423438 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp" rename to "stg_pipedrive__activity"
+[0m13:58:20.425396 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.444430 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m13:58:20.444934 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.445364 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m13:58:20.448163 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m13:58:20.455086 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup"
+[0m13:58:20.460667 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m13:58:20.461147 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup" cascade
+[0m13:58:20.464358 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m13:58:20.467294 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: Close
+[0m13:58:20.468934 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109681790>]}
+[0m13:58:20.469705 [info ] [Thread-1 (]: 1 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity  [[32mCREATE VIEW[0m in 0.13s]
+[0m13:58:20.470559 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m13:58:20.471174 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m13:58:20.471747 [info ] [Thread-1 (]: 2 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [RUN]
+[0m13:58:20.472299 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity, now model.enpal_assessment_project.stg_pipedrive__activity_types)
+[0m13:58:20.472730 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m13:58:20.476945 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.478128 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m13:58:20.482803 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.485047 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.485535 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: BEGIN
+[0m13:58:20.485944 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.504079 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m13:58:20.504665 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.505124 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."activity_types"
+  );
+[0m13:58:20.508538 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m13:58:20.511803 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.512242 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp" rename to "stg_pipedrive__activity_types"
+[0m13:58:20.513910 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.515672 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m13:58:20.516111 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.516635 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m13:58:20.518501 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.521123 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup"
+[0m13:58:20.522290 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m13:58:20.522926 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup" cascade
+[0m13:58:20.524432 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:58:20.526022 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: Close
+[0m13:58:20.526624 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1ff3b0>]}
+[0m13:58:20.527307 [info ] [Thread-1 (]: 2 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [[32mCREATE VIEW[0m in 0.05s]
+[0m13:58:20.528170 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m13:58:20.528855 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m13:58:20.529837 [info ] [Thread-1 (]: 3 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [RUN]
+[0m13:58:20.530475 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity_types, now model.enpal_assessment_project.stg_pipedrive__deal_changes)
+[0m13:58:20.530967 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m13:58:20.534049 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.534997 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m13:58:20.538886 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.539934 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.540549 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: BEGIN
+[0m13:58:20.541063 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.560623 [debug] [Thread-1 (]: SQL status: BEGIN in 0.019 seconds
+[0m13:58:20.561323 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.561792 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."deal_changes"
+  );
+[0m13:58:20.564487 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:58:20.568093 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.568659 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp" rename to "stg_pipedrive__deal_changes"
+[0m13:58:20.570591 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.572605 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m13:58:20.573122 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.573555 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m13:58:20.575700 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m13:58:20.578410 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup"
+[0m13:58:20.579327 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m13:58:20.580054 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup" cascade
+[0m13:58:20.581969 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:58:20.583806 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: Close
+[0m13:58:20.584542 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c09ce30>]}
+[0m13:58:20.585445 [info ] [Thread-1 (]: 3 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [[32mCREATE VIEW[0m in 0.05s]
+[0m13:58:20.586403 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m13:58:20.586974 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__fields
+[0m13:58:20.587887 [info ] [Thread-1 (]: 4 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__fields ... [RUN]
+[0m13:58:20.588570 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__deal_changes, now model.enpal_assessment_project.stg_pipedrive__fields)
+[0m13:58:20.589073 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__fields
+[0m13:58:20.591937 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.592753 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__fields
+[0m13:58:20.596482 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.597439 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.597913 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: BEGIN
+[0m13:58:20.598316 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.614869 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m13:58:20.615397 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.615852 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__fields"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__fields__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."fields"
+  );
+[0m13:58:20.618860 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:58:20.622376 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.622888 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__fields__dbt_tmp" rename to "stg_pipedrive__fields"
+[0m13:58:20.624544 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.626566 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: COMMIT
+[0m13:58:20.627019 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.627427 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: COMMIT
+[0m13:58:20.629125 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.633114 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__fields__dbt_backup"
+[0m13:58:20.634122 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__fields"
+[0m13:58:20.634597 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__fields"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__fields__dbt_backup" cascade
+[0m13:58:20.636125 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:58:20.637685 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__fields: Close
+[0m13:58:20.638305 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2585c0>]}
+[0m13:58:20.639007 [info ] [Thread-1 (]: 4 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__fields  [[32mCREATE VIEW[0m in 0.05s]
+[0m13:58:20.639727 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__fields
+[0m13:58:20.640247 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m13:58:20.640993 [info ] [Thread-1 (]: 5 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__stages ... [RUN]
+[0m13:58:20.641558 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__fields, now model.enpal_assessment_project.stg_pipedrive__stages)
+[0m13:58:20.641996 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__stages
+[0m13:58:20.644633 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.645407 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__stages
+[0m13:58:20.649532 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.650417 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.651005 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: BEGIN
+[0m13:58:20.651440 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.667413 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m13:58:20.668044 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.668498 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."stages"
+  );
+[0m13:58:20.670700 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:58:20.674145 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.674620 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp" rename to "stg_pipedrive__stages"
+[0m13:58:20.676207 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.677911 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m13:58:20.678352 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.678760 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m13:58:20.680650 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.683271 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup"
+[0m13:58:20.684082 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m13:58:20.684515 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup" cascade
+[0m13:58:20.686037 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:58:20.687638 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: Close
+[0m13:58:20.688209 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c25af30>]}
+[0m13:58:20.688872 [info ] [Thread-1 (]: 5 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__stages  [[32mCREATE VIEW[0m in 0.05s]
+[0m13:58:20.689594 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m13:58:20.690091 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__users
+[0m13:58:20.690900 [info ] [Thread-1 (]: 6 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__users .... [RUN]
+[0m13:58:20.691620 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__stages, now model.enpal_assessment_project.stg_pipedrive__users)
+[0m13:58:20.692088 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__users
+[0m13:58:20.694771 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.695558 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__users
+[0m13:58:20.699830 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.701067 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.701681 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: BEGIN
+[0m13:58:20.702238 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:58:20.719567 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m13:58:20.720143 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.720593 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."users"
+  );
+[0m13:58:20.723132 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m13:58:20.727113 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.727631 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp" rename to "stg_pipedrive__users"
+[0m13:58:20.729297 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m13:58:20.731059 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m13:58:20.731533 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.731946 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m13:58:20.733734 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.736509 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup"
+[0m13:58:20.737441 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m13:58:20.737962 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup" cascade
+[0m13:58:20.739389 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m13:58:20.740991 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: Close
+[0m13:58:20.741583 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5d4dc59-5d41-4df8-93e2-8a1906a0273f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0ee9f0>]}
+[0m13:58:20.742286 [info ] [Thread-1 (]: 6 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__users  [[32mCREATE VIEW[0m in 0.05s]
+[0m13:58:20.742996 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__users
+[0m13:58:20.744387 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.744848 [debug] [MainThread]: On master: BEGIN
+[0m13:58:20.745199 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:58:20.760490 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m13:58:20.761208 [debug] [MainThread]: On master: COMMIT
+[0m13:58:20.761620 [debug] [MainThread]: Using postgres connection "master"
+[0m13:58:20.761982 [debug] [MainThread]: On master: COMMIT
+[0m13:58:20.763381 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m13:58:20.763952 [debug] [MainThread]: On master: Close
+[0m13:58:20.764594 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:58:20.765132 [debug] [MainThread]: Connection 'model.enpal_assessment_project.stg_pipedrive__users' was properly closed.
+[0m13:58:20.765608 [info ] [MainThread]: 
+[0m13:58:20.766187 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.66 seconds (0.66s).
+[0m13:58:20.768177 [debug] [MainThread]: Command end result
+[0m13:58:20.797338 [info ] [MainThread]: 
+[0m13:58:20.797853 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m13:58:20.798236 [info ] [MainThread]: 
+[0m13:58:20.798642 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m13:58:20.800313 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.8278074, "process_in_blocks": "0", "process_kernel_time": 0.363255, "process_mem_max_rss": "112988160", "process_out_blocks": "0", "process_user_time": 2.794194}
+[0m13:58:20.800987 [debug] [MainThread]: Command `dbt run` succeeded at 13:58:20.800856 after 1.83 seconds
+[0m13:58:20.801448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c75e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109baf530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ba7b0b0>]}
+[0m13:58:20.801867 [debug] [MainThread]: Flushing usage events
