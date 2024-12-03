@@ -11793,3 +11793,2177 @@ drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__user
 [0m17:46:50.872322 [debug] [MainThread]: Command `dbt run` succeeded at 17:46:50.872191 after 2.09 seconds
 [0m17:46:50.872796 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1055bed20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109299ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092987a0>]}
 [0m17:46:50.873222 [debug] [MainThread]: Flushing usage events
+[0m18:18:39.602756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f03020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106962b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ac6d50>]}
+
+
+============================== 18:18:39.610773 | 14e6b1fa-5975-4243-8dd8-389f46bed34c ==============================
+[0m18:18:39.610773 [info ] [MainThread]: Running with dbt=1.8.9
+[0m18:18:39.612356 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m18:18:39.896103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f03b00>]}
+[0m18:18:39.964643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ec5340>]}
+[0m18:18:39.966423 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m18:18:40.109720 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m18:18:40.287100 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+[0m18:18:40.287814 [debug] [MainThread]: Partial parsing: added file: enpal_assessment_project://models/staging/base/base_pipedrive__fields.sql
+[0m18:18:40.288209 [debug] [MainThread]: Partial parsing: deleted file: enpal_assessment_project://models/staging/stg_pipedrive__fields.sql
+[0m18:18:40.288710 [debug] [MainThread]: Partial parsing: updated file: enpal_assessment_project://models/staging/stg_pipedrive__stages.sql
+[0m18:18:40.584404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10793d3a0>]}
+[0m18:18:40.732386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a1ed50>]}
+[0m18:18:40.733108 [info ] [MainThread]: Found 6 models, 16 data tests, 6 sources, 428 macros
+[0m18:18:40.733573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106fd2e70>]}
+[0m18:18:40.736319 [info ] [MainThread]: 
+[0m18:18:40.737013 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:18:40.741646 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m18:18:40.815837 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m18:18:40.816433 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:18:40.816840 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:18:40.871777 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.055 seconds
+[0m18:18:40.873556 [debug] [ThreadPool]: On list_postgres: Close
+[0m18:18:40.875480 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_pipedrive_analytics)
+[0m18:18:40.882144 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:18:40.882612 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m18:18:40.883087 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:18:40.898464 [debug] [ThreadPool]: SQL status: BEGIN in 0.015 seconds
+[0m18:18:40.899253 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:18:40.899754 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m18:18:40.903728 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.004 seconds
+[0m18:18:40.905490 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m18:18:40.906765 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m18:18:40.913027 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:40.913520 [debug] [MainThread]: On master: BEGIN
+[0m18:18:40.913870 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:18:40.932445 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m18:18:40.932970 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:40.933450 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:18:40.939094 [debug] [MainThread]: SQL status: SELECT 6 in 0.005 seconds
+[0m18:18:40.940656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10542a210>]}
+[0m18:18:40.941162 [debug] [MainThread]: On master: ROLLBACK
+[0m18:18:40.942438 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:40.942847 [debug] [MainThread]: On master: BEGIN
+[0m18:18:40.944903 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m18:18:40.945398 [debug] [MainThread]: On master: COMMIT
+[0m18:18:40.945835 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:40.946439 [debug] [MainThread]: On master: COMMIT
+[0m18:18:40.949519 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m18:18:40.950417 [debug] [MainThread]: On master: Close
+[0m18:18:40.951401 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:18:40.952065 [info ] [MainThread]: 
+[0m18:18:40.955835 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:18:40.956553 [info ] [Thread-1 (]: 1 of 6 START sql view model public_pipedrive_analytics.base_pipedrive__fields .. [RUN]
+[0m18:18:40.957116 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.base_pipedrive__fields)
+[0m18:18:40.957561 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:18:40.968041 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:40.969136 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:18:41.012091 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.013672 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.014265 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: BEGIN
+[0m18:18:41.014781 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.031340 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m18:18:41.032234 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.032740 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+
+  create view "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."fields"
+  );
+[0m18:18:41.036723 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m18:18:41.043891 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.044400 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp" rename to "base_pipedrive__fields"
+[0m18:18:41.046331 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.062903 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:18:41.063420 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.063830 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:18:41.068310 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m18:18:41.075486 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup"
+[0m18:18:41.081269 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:18:41.081768 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup" cascade
+[0m18:18:41.083716 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m18:18:41.086508 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: Close
+[0m18:18:41.088212 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053c55e0>]}
+[0m18:18:41.088995 [info ] [Thread-1 (]: 1 of 6 OK created sql view model public_pipedrive_analytics.base_pipedrive__fields  [[32mCREATE VIEW[0m in 0.13s]
+[0m18:18:41.090025 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:18:41.090622 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:18:41.091186 [info ] [Thread-1 (]: 2 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity . [RUN]
+[0m18:18:41.091813 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.base_pipedrive__fields, now model.enpal_assessment_project.stg_pipedrive__activity)
+[0m18:18:41.092272 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:18:41.095398 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.096365 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:18:41.101850 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.102733 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.103166 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: BEGIN
+[0m18:18:41.103563 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.121563 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:18:41.122320 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.122830 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp"
+    
+    
+  as (
+    -- This model is a staging table for the activity table in the Pipedrive database.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- Rename others for consistency with other models: model.id, model.reference_model_id
+SELECT
+    activity_id AS id,
+    type AS activity_type,
+    assigned_to_user AS user_id,
+    deal_id,
+    done AS is_done,
+    due_to AS due_date
+FROM "postgres"."public"."activity"
+  );
+[0m18:18:41.125482 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:18:41.129024 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.129530 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity" rename to "stg_pipedrive__activity__dbt_backup"
+[0m18:18:41.131187 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.134712 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.135198 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp" rename to "stg_pipedrive__activity"
+[0m18:18:41.136896 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.141331 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:18:41.141844 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.142264 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:18:41.145437 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m18:18:41.148216 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup"
+[0m18:18:41.149073 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:18:41.149637 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup" cascade
+[0m18:18:41.152380 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:18:41.154082 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: Close
+[0m18:18:41.154859 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ee3830>]}
+[0m18:18:41.155688 [info ] [Thread-1 (]: 2 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:18:41.156557 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:18:41.157207 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:18:41.157940 [info ] [Thread-1 (]: 3 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [RUN]
+[0m18:18:41.158509 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity, now model.enpal_assessment_project.stg_pipedrive__activity_types)
+[0m18:18:41.158949 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:18:41.161881 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.163087 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:18:41.168792 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.169686 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.170155 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: BEGIN
+[0m18:18:41.170553 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.188779 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:18:41.189415 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.189895 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `activity_types` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- The `active` column is a string with just two possible value. It makes more sense as a bool
+SELECT
+    id,
+    name AS activity_name,
+    CASE
+        WHEN active = 'Yes' THEN TRUE
+        ELSE FALSE
+    END AS is_active,
+    type AS activity_type
+FROM "postgres"."public"."activity_types"
+  );
+[0m18:18:41.193101 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m18:18:41.197402 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.197899 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types" rename to "stg_pipedrive__activity_types__dbt_backup"
+[0m18:18:41.199707 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.202985 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.203441 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp" rename to "stg_pipedrive__activity_types"
+[0m18:18:41.205143 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.207167 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:18:41.207658 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.208079 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:18:41.209884 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:18:41.212575 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup"
+[0m18:18:41.213416 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:18:41.213850 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup" cascade
+[0m18:18:41.216818 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:18:41.218436 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: Close
+[0m18:18:41.219022 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107efdd60>]}
+[0m18:18:41.219720 [info ] [Thread-1 (]: 3 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:18:41.220543 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:18:41.221073 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:18:41.221751 [info ] [Thread-1 (]: 4 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [RUN]
+[0m18:18:41.222352 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity_types, now model.enpal_assessment_project.stg_pipedrive__deal_changes)
+[0m18:18:41.222799 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:18:41.225585 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.226373 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:18:41.230095 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.230850 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.231282 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: BEGIN
+[0m18:18:41.231691 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.250268 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:18:41.251085 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.251554 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `deal_changes` table in the `pipedrive` schema.
+-- Renaming a id column to standardise
+SELECT
+    deal_id AS id,
+    change_time,
+    changed_field_key,
+    new_value
+FROM "postgres"."public"."deal_changes"
+  );
+[0m18:18:41.254186 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:18:41.257450 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.257912 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes" rename to "stg_pipedrive__deal_changes__dbt_backup"
+[0m18:18:41.259561 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.262925 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.263401 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp" rename to "stg_pipedrive__deal_changes"
+[0m18:18:41.264923 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.266941 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:18:41.267410 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.267823 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:18:41.269811 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:18:41.272475 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup"
+[0m18:18:41.273379 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:18:41.273804 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup" cascade
+[0m18:18:41.276317 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:18:41.277913 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: Close
+[0m18:18:41.278512 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107dd7680>]}
+[0m18:18:41.279237 [info ] [Thread-1 (]: 4 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:18:41.279973 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:18:41.280513 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:18:41.281288 [info ] [Thread-1 (]: 5 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__stages ... [RUN]
+[0m18:18:41.281927 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__deal_changes, now model.enpal_assessment_project.stg_pipedrive__stages)
+[0m18:18:41.282467 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:18:41.285395 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.286571 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:18:41.292359 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.293339 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.293753 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: BEGIN
+[0m18:18:41.294163 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.311561 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:18:41.312236 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.312729 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp"
+    
+    
+  as (
+    /* NOT USED. 
+    The source table has it's origins in the fields table, which is not used in the final model.
+    I would rather keep stages and lost_reasons standardised in the final model.
+    My assumption is that the fields table is used to store custom fields,
+    and if this were to be updated by a sysadmin, the static stages table would not reflect the changes.
+NOT USED. */
+
+-- This model is generated from the `stages` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    stage_id AS id,
+    stage_name
+FROM "postgres"."public"."stages"
+  );
+[0m18:18:41.315501 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:18:41.320005 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.320479 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages" rename to "stg_pipedrive__stages__dbt_backup"
+[0m18:18:41.322167 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.325265 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.325706 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp" rename to "stg_pipedrive__stages"
+[0m18:18:41.327439 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.329543 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:18:41.330021 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.330506 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:18:41.332810 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:18:41.335467 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup"
+[0m18:18:41.336278 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:18:41.336698 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup" cascade
+[0m18:18:41.339228 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:18:41.340859 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: Close
+[0m18:18:41.341454 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d8eab0>]}
+[0m18:18:41.342208 [info ] [Thread-1 (]: 5 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__stages  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:18:41.342961 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:18:41.343554 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:18:41.344265 [info ] [Thread-1 (]: 6 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__users .... [RUN]
+[0m18:18:41.344937 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__stages, now model.enpal_assessment_project.stg_pipedrive__users)
+[0m18:18:41.345399 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:18:41.348685 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.349608 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:18:41.355228 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.356102 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.356539 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: BEGIN
+[0m18:18:41.356938 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:18:41.376894 [debug] [Thread-1 (]: SQL status: BEGIN in 0.020 seconds
+[0m18:18:41.377750 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.378408 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `users` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    id,
+    name AS user_name,
+    email AS user_email,
+    modified AS modified_date
+FROM "postgres"."public"."users"
+  );
+[0m18:18:41.381205 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:18:41.385060 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.385547 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users" rename to "stg_pipedrive__users__dbt_backup"
+[0m18:18:41.387369 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:18:41.390739 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.391301 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp" rename to "stg_pipedrive__users"
+[0m18:18:41.393711 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:18:41.395666 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:18:41.396341 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.396781 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:18:41.398743 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:18:41.401768 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup"
+[0m18:18:41.402641 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:18:41.403088 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup" cascade
+[0m18:18:41.405586 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:18:41.407226 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: Close
+[0m18:18:41.407870 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '14e6b1fa-5975-4243-8dd8-389f46bed34c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e3f860>]}
+[0m18:18:41.408726 [info ] [Thread-1 (]: 6 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__users  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:18:41.409580 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:18:41.411107 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:41.411532 [debug] [MainThread]: On master: BEGIN
+[0m18:18:41.411878 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:18:41.427515 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m18:18:41.428251 [debug] [MainThread]: On master: COMMIT
+[0m18:18:41.428820 [debug] [MainThread]: Using postgres connection "master"
+[0m18:18:41.429365 [debug] [MainThread]: On master: COMMIT
+[0m18:18:41.431893 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m18:18:41.432450 [debug] [MainThread]: On master: Close
+[0m18:18:41.432962 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:18:41.433432 [debug] [MainThread]: Connection 'model.enpal_assessment_project.stg_pipedrive__users' was properly closed.
+[0m18:18:41.433892 [info ] [MainThread]: 
+[0m18:18:41.434453 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[0m18:18:41.437005 [debug] [MainThread]: Command end result
+[0m18:18:41.472559 [info ] [MainThread]: 
+[0m18:18:41.473224 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:18:41.473658 [info ] [MainThread]: 
+[0m18:18:41.474085 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m18:18:41.476637 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.9656836, "process_in_blocks": "0", "process_kernel_time": 0.556344, "process_mem_max_rss": "113532928", "process_out_blocks": "0", "process_user_time": 3.11733}
+[0m18:18:41.477429 [debug] [MainThread]: Command `dbt run` succeeded at 18:18:41.477284 after 1.97 seconds
+[0m18:18:41.477934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102e3ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106547bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a81e50>]}
+[0m18:18:41.478414 [debug] [MainThread]: Flushing usage events
+[0m18:22:12.229481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c1d7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10866f110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10866ec30>]}
+
+
+============================== 18:22:12.237238 | f6e11cac-7bf8-4042-8179-ab50f2a00091 ==============================
+[0m18:22:12.237238 [info ] [MainThread]: Running with dbt=1.8.9
+[0m18:22:12.238220 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:12.522668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107510260>]}
+[0m18:22:12.592087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f1a8d0>]}
+[0m18:22:12.593470 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m18:22:12.740404 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m18:22:12.927268 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:22:12.927784 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:22:12.992464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c69190>]}
+[0m18:22:13.140337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109500fb0>]}
+[0m18:22:13.141043 [info ] [MainThread]: Found 6 models, 16 data tests, 6 sources, 428 macros
+[0m18:22:13.141553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087ab440>]}
+[0m18:22:13.144353 [info ] [MainThread]: 
+[0m18:22:13.145077 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:22:13.150271 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m18:22:13.229761 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m18:22:13.230223 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:22:13.230589 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:22:13.282855 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.052 seconds
+[0m18:22:13.284551 [debug] [ThreadPool]: On list_postgres: Close
+[0m18:22:13.286261 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_pipedrive_analytics)
+[0m18:22:13.294031 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:22:13.294473 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m18:22:13.294816 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:22:13.310536 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m18:22:13.311042 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:22:13.311502 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m18:22:13.315910 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.004 seconds
+[0m18:22:13.317560 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m18:22:13.318846 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m18:22:13.325182 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.325622 [debug] [MainThread]: On master: BEGIN
+[0m18:22:13.325961 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:22:13.341285 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m18:22:13.341892 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.342364 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:22:13.347319 [debug] [MainThread]: SQL status: SELECT 7 in 0.004 seconds
+[0m18:22:13.348991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10986c8f0>]}
+[0m18:22:13.349510 [debug] [MainThread]: On master: ROLLBACK
+[0m18:22:13.351113 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.351586 [debug] [MainThread]: On master: BEGIN
+[0m18:22:13.353541 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m18:22:13.354019 [debug] [MainThread]: On master: COMMIT
+[0m18:22:13.354417 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.354767 [debug] [MainThread]: On master: COMMIT
+[0m18:22:13.355891 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:22:13.356283 [debug] [MainThread]: On master: Close
+[0m18:22:13.356813 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:22:13.357226 [info ] [MainThread]: 
+[0m18:22:13.360388 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:22:13.361053 [info ] [Thread-1 (]: 1 of 6 START sql view model public_pipedrive_analytics.base_pipedrive__fields .. [RUN]
+[0m18:22:13.361605 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.base_pipedrive__fields)
+[0m18:22:13.362051 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:22:13.371596 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.372536 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:22:13.414890 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.415871 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.416353 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: BEGIN
+[0m18:22:13.416825 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.432268 [debug] [Thread-1 (]: SQL status: BEGIN in 0.015 seconds
+[0m18:22:13.433192 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.433680 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+
+  create view "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."fields"
+  );
+[0m18:22:13.436160 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:22:13.443085 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.443583 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."base_pipedrive__fields" rename to "base_pipedrive__fields__dbt_backup"
+[0m18:22:13.445889 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:22:13.449178 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.449816 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp" rename to "base_pipedrive__fields"
+[0m18:22:13.452646 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:22:13.471707 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:22:13.472252 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.472757 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:22:13.477228 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m18:22:13.484629 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup"
+[0m18:22:13.490766 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:22:13.491255 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup" cascade
+[0m18:22:13.494890 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m18:22:13.497641 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: Close
+[0m18:22:13.499188 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106f19910>]}
+[0m18:22:13.500150 [info ] [Thread-1 (]: 1 of 6 OK created sql view model public_pipedrive_analytics.base_pipedrive__fields  [[32mCREATE VIEW[0m in 0.14s]
+[0m18:22:13.501246 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:22:13.501875 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:22:13.502506 [info ] [Thread-1 (]: 2 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity . [RUN]
+[0m18:22:13.503076 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.base_pipedrive__fields, now model.enpal_assessment_project.stg_pipedrive__activity)
+[0m18:22:13.503503 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:22:13.506393 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.507179 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:22:13.512842 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.513744 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.514184 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: BEGIN
+[0m18:22:13.514580 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.534768 [debug] [Thread-1 (]: SQL status: BEGIN in 0.020 seconds
+[0m18:22:13.535436 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.535890 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp"
+    
+    
+  as (
+    -- This model is a staging table for the activity table in the Pipedrive database.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- Rename others for consistency with other models: model.id, model.reference_model_id
+SELECT
+    activity_id AS id,
+    type AS activity_type,
+    assigned_to_user AS user_id,
+    deal_id,
+    done AS is_done,
+    due_to AS due_date
+FROM "postgres"."public"."activity"
+  );
+[0m18:22:13.539525 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m18:22:13.542992 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.543468 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity" rename to "stg_pipedrive__activity__dbt_backup"
+[0m18:22:13.545213 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.548453 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.548963 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp" rename to "stg_pipedrive__activity"
+[0m18:22:13.550907 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.552880 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:22:13.553441 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.553876 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:22:13.556179 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:22:13.559216 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup"
+[0m18:22:13.560183 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:22:13.560640 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup" cascade
+[0m18:22:13.563265 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:22:13.564899 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: Close
+[0m18:22:13.565529 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109883770>]}
+[0m18:22:13.566691 [info ] [Thread-1 (]: 2 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:22:13.567519 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:22:13.568144 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:22:13.568905 [info ] [Thread-1 (]: 3 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [RUN]
+[0m18:22:13.569490 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity, now model.enpal_assessment_project.stg_pipedrive__activity_types)
+[0m18:22:13.569932 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:22:13.572785 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.573645 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:22:13.578148 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.579052 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.579484 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: BEGIN
+[0m18:22:13.579880 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.598152 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:22:13.598805 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.599289 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `activity_types` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- The `active` column is a string with just two possible value. It makes more sense as a bool
+SELECT
+    id,
+    name AS activity_name,
+    CASE
+        WHEN active = 'Yes' THEN TRUE
+        ELSE FALSE
+    END AS is_active,
+    type AS activity_type
+FROM "postgres"."public"."activity_types"
+  );
+[0m18:22:13.603559 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.004 seconds
+[0m18:22:13.606882 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.607330 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types" rename to "stg_pipedrive__activity_types__dbt_backup"
+[0m18:22:13.608893 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.612107 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.612557 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp" rename to "stg_pipedrive__activity_types"
+[0m18:22:13.614164 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.616298 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:22:13.616890 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.617342 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:22:13.619188 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:22:13.621980 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup"
+[0m18:22:13.622861 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:22:13.623300 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup" cascade
+[0m18:22:13.625759 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:22:13.627332 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: Close
+[0m18:22:13.627904 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10993bb30>]}
+[0m18:22:13.628576 [info ] [Thread-1 (]: 3 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:22:13.629301 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:22:13.629812 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:22:13.630519 [info ] [Thread-1 (]: 4 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [RUN]
+[0m18:22:13.631091 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity_types, now model.enpal_assessment_project.stg_pipedrive__deal_changes)
+[0m18:22:13.631529 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:22:13.634442 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.635253 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:22:13.639231 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.640080 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.640503 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: BEGIN
+[0m18:22:13.640891 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.656473 [debug] [Thread-1 (]: SQL status: BEGIN in 0.015 seconds
+[0m18:22:13.657167 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.657659 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `deal_changes` table in the `pipedrive` schema.
+-- Renaming a id column to standardise
+SELECT
+    deal_id AS id,
+    change_time,
+    changed_field_key,
+    new_value
+FROM "postgres"."public"."deal_changes"
+  );
+[0m18:22:13.660184 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:22:13.663652 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.664180 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes" rename to "stg_pipedrive__deal_changes__dbt_backup"
+[0m18:22:13.666146 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.672799 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.673609 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp" rename to "stg_pipedrive__deal_changes"
+[0m18:22:13.676356 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:22:13.678397 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:22:13.678905 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.679302 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:22:13.681494 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:22:13.684928 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup"
+[0m18:22:13.685788 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:22:13.686212 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup" cascade
+[0m18:22:13.688861 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:22:13.691113 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: Close
+[0m18:22:13.691743 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099b9c70>]}
+[0m18:22:13.692445 [info ] [Thread-1 (]: 4 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:22:13.693178 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:22:13.693697 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:22:13.694377 [info ] [Thread-1 (]: 5 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__stages ... [RUN]
+[0m18:22:13.694978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__deal_changes, now model.enpal_assessment_project.stg_pipedrive__stages)
+[0m18:22:13.695519 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:22:13.698621 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.700040 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:22:13.703822 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.704657 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.705212 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: BEGIN
+[0m18:22:13.705902 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.723634 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:22:13.724450 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.725043 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp"
+    
+    
+  as (
+    /* NOT USED. 
+    The source table has it's origins in the fields table, which is not used in the final model.
+    I would rather keep stages and lost_reasons standardised in the final model.
+    My assumption is that the fields table is used to store custom fields,
+    and if this were to be updated by a sysadmin, the static stages table would not reflect the changes.
+NOT USED. */
+
+-- This model is generated from the `stages` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    stage_id AS id,
+    stage_name
+FROM "postgres"."public"."stages"
+  );
+[0m18:22:13.727464 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:22:13.730832 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.731298 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages" rename to "stg_pipedrive__stages__dbt_backup"
+[0m18:22:13.732907 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.736373 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.736899 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp" rename to "stg_pipedrive__stages"
+[0m18:22:13.738661 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.740699 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:22:13.741407 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.741875 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:22:13.743976 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:22:13.746631 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup"
+[0m18:22:13.747488 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:22:13.747922 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup" cascade
+[0m18:22:13.750314 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:22:13.751877 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: Close
+[0m18:22:13.752478 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10950ad20>]}
+[0m18:22:13.753244 [info ] [Thread-1 (]: 5 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__stages  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:22:13.754103 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:22:13.754658 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:22:13.755400 [info ] [Thread-1 (]: 6 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__users .... [RUN]
+[0m18:22:13.755980 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__stages, now model.enpal_assessment_project.stg_pipedrive__users)
+[0m18:22:13.756435 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:22:13.759251 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.760063 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:22:13.763980 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.764778 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.765219 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: BEGIN
+[0m18:22:13.765611 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:22:13.783820 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:22:13.784445 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.784980 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `users` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    id,
+    name AS user_name,
+    email AS user_email,
+    modified AS modified_date
+FROM "postgres"."public"."users"
+  );
+[0m18:22:13.787553 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:22:13.790898 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.791379 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users" rename to "stg_pipedrive__users__dbt_backup"
+[0m18:22:13.793283 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.796578 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.797058 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp" rename to "stg_pipedrive__users"
+[0m18:22:13.798722 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:22:13.800899 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:22:13.801450 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.801941 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:22:13.803964 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:22:13.808161 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup"
+[0m18:22:13.809067 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:22:13.809511 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup" cascade
+[0m18:22:13.811869 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:22:13.813441 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: Close
+[0m18:22:13.814019 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f6e11cac-7bf8-4042-8179-ab50f2a00091', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109987b30>]}
+[0m18:22:13.814683 [info ] [Thread-1 (]: 6 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__users  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:22:13.815393 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:22:13.816879 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.817375 [debug] [MainThread]: On master: BEGIN
+[0m18:22:13.817770 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:22:13.834266 [debug] [MainThread]: SQL status: BEGIN in 0.016 seconds
+[0m18:22:13.834862 [debug] [MainThread]: On master: COMMIT
+[0m18:22:13.835267 [debug] [MainThread]: Using postgres connection "master"
+[0m18:22:13.835624 [debug] [MainThread]: On master: COMMIT
+[0m18:22:13.836817 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:22:13.837239 [debug] [MainThread]: On master: Close
+[0m18:22:13.837744 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:22:13.838129 [debug] [MainThread]: Connection 'model.enpal_assessment_project.stg_pipedrive__users' was properly closed.
+[0m18:22:13.838578 [info ] [MainThread]: 
+[0m18:22:13.838999 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.69 seconds (0.69s).
+[0m18:22:13.841048 [debug] [MainThread]: Command end result
+[0m18:22:13.874001 [info ] [MainThread]: 
+[0m18:22:13.874512 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:22:13.874905 [info ] [MainThread]: 
+[0m18:22:13.875321 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m18:22:13.877560 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.7366999, "process_in_blocks": "0", "process_kernel_time": 0.568019, "process_mem_max_rss": "109260800", "process_out_blocks": "0", "process_user_time": 2.951026}
+[0m18:22:13.878289 [debug] [MainThread]: Command `dbt run` succeeded at 18:22:13.878148 after 1.74 seconds
+[0m18:22:13.878755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104986d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080f8320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080f8da0>]}
+[0m18:22:13.879174 [debug] [MainThread]: Flushing usage events
+[0m18:23:44.842056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126506b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112be3050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112be2a80>]}
+
+
+============================== 18:23:44.847450 | 9c88c8ad-7a82-45c3-bd95-45843b9a76ef ==============================
+[0m18:23:44.847450 [info ] [MainThread]: Running with dbt=1.8.9
+[0m18:23:44.848350 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:23:45.085248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d16ba0>]}
+[0m18:23:45.150629 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112653860>]}
+[0m18:23:45.151700 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m18:23:45.284397 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m18:23:45.436266 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:23:45.436732 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:23:45.494519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131d4c80>]}
+[0m18:23:45.622955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113a5f530>]}
+[0m18:23:45.623517 [info ] [MainThread]: Found 6 models, 16 data tests, 6 sources, 428 macros
+[0m18:23:45.623931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112cf66c0>]}
+[0m18:23:45.626521 [info ] [MainThread]: 
+[0m18:23:45.627181 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:23:45.631477 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres'
+[0m18:23:45.697712 [debug] [ThreadPool]: Using postgres connection "list_postgres"
+[0m18:23:45.698190 [debug] [ThreadPool]: On list_postgres: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:23:45.698570 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:23:45.730095 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.031 seconds
+[0m18:23:45.731653 [debug] [ThreadPool]: On list_postgres: Close
+[0m18:23:45.733547 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_postgres, now list_postgres_public_pipedrive_analytics)
+[0m18:23:45.741172 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:23:45.741624 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m18:23:45.741965 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:23:45.757653 [debug] [ThreadPool]: SQL status: BEGIN in 0.016 seconds
+[0m18:23:45.758220 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:23:45.758662 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m18:23:45.762757 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.004 seconds
+[0m18:23:45.764368 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m18:23:45.765626 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m18:23:45.772092 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:45.772538 [debug] [MainThread]: On master: BEGIN
+[0m18:23:45.772878 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:23:45.788272 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m18:23:45.788780 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:45.789288 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:23:45.794052 [debug] [MainThread]: SQL status: SELECT 6 in 0.004 seconds
+[0m18:23:45.795594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131af620>]}
+[0m18:23:45.796094 [debug] [MainThread]: On master: ROLLBACK
+[0m18:23:45.797365 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:45.797770 [debug] [MainThread]: On master: BEGIN
+[0m18:23:45.799669 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:23:45.800245 [debug] [MainThread]: On master: COMMIT
+[0m18:23:45.800692 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:45.801035 [debug] [MainThread]: On master: COMMIT
+[0m18:23:45.802329 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:23:45.802749 [debug] [MainThread]: On master: Close
+[0m18:23:45.803296 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:23:45.803780 [info ] [MainThread]: 
+[0m18:23:45.806196 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:23:45.806868 [info ] [Thread-1 (]: 1 of 6 START sql view model public_pipedrive_analytics.base_pipedrive__fields .. [RUN]
+[0m18:23:45.807562 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now model.enpal_assessment_project.base_pipedrive__fields)
+[0m18:23:45.808061 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:23:45.819527 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.820511 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:23:45.860423 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.861332 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.861773 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: BEGIN
+[0m18:23:45.862171 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:45.878242 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m18:23:45.878872 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.879325 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+
+  create view "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp"
+    
+    
+  as (
+    SELECT *
+FROM "postgres"."public"."fields"
+  );
+[0m18:23:45.881790 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:23:45.888893 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.889417 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."base_pipedrive__fields" rename to "base_pipedrive__fields__dbt_backup"
+[0m18:23:45.891203 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:45.894394 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.894841 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+alter table "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_tmp" rename to "base_pipedrive__fields"
+[0m18:23:45.896734 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:45.915311 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:23:45.915823 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.916300 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: COMMIT
+[0m18:23:45.918904 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:23:45.925617 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup"
+[0m18:23:45.931358 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.base_pipedrive__fields"
+[0m18:23:45.931846 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.base_pipedrive__fields"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."base_pipedrive__fields__dbt_backup" cascade
+[0m18:23:45.934816 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:23:45.937575 [debug] [Thread-1 (]: On model.enpal_assessment_project.base_pipedrive__fields: Close
+[0m18:23:45.939247 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111489670>]}
+[0m18:23:45.940021 [info ] [Thread-1 (]: 1 of 6 OK created sql view model public_pipedrive_analytics.base_pipedrive__fields  [[32mCREATE VIEW[0m in 0.13s]
+[0m18:23:45.940957 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.base_pipedrive__fields
+[0m18:23:45.941543 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:23:45.942199 [info ] [Thread-1 (]: 2 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity . [RUN]
+[0m18:23:45.942981 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.base_pipedrive__fields, now model.enpal_assessment_project.stg_pipedrive__activity)
+[0m18:23:45.943492 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:23:45.946458 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.947284 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:23:45.953521 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.954414 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.954901 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: BEGIN
+[0m18:23:45.956488 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:45.975044 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:45.976399 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.976968 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp"
+    
+    
+  as (
+    -- This model is a staging table for the activity table in the Pipedrive database.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- Rename others for consistency with other models: model.id, model.reference_model_id
+SELECT
+    activity_id AS id,
+    type AS activity_type,
+    assigned_to_user AS user_id,
+    deal_id,
+    done AS is_done,
+    due_to AS due_date
+FROM "postgres"."public"."activity"
+  );
+[0m18:23:45.979813 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:23:45.983591 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.984191 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity" rename to "stg_pipedrive__activity__dbt_backup"
+[0m18:23:45.986061 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:45.989771 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.990308 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_tmp" rename to "stg_pipedrive__activity"
+[0m18:23:45.991923 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:45.994460 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:23:45.995003 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:45.995439 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: COMMIT
+[0m18:23:45.997238 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m18:23:45.999829 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup"
+[0m18:23:46.000799 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity"
+[0m18:23:46.001258 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity__dbt_backup" cascade
+[0m18:23:46.003649 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:23:46.005247 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity: Close
+[0m18:23:46.005843 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113913f20>]}
+[0m18:23:46.006626 [info ] [Thread-1 (]: 2 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:23:46.007436 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity
+[0m18:23:46.008545 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:23:46.009783 [info ] [Thread-1 (]: 3 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [RUN]
+[0m18:23:46.010652 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity, now model.enpal_assessment_project.stg_pipedrive__activity_types)
+[0m18:23:46.011523 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:23:46.015492 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.018464 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:23:46.022660 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.023529 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.023962 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: BEGIN
+[0m18:23:46.024411 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:46.043382 [debug] [Thread-1 (]: SQL status: BEGIN in 0.019 seconds
+[0m18:23:46.044201 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.044882 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `activity_types` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords
+-- The `active` column is a string with just two possible value. It makes more sense as a bool
+SELECT
+    id,
+    name AS activity_name,
+    CASE
+        WHEN active = 'Yes' THEN TRUE
+        ELSE FALSE
+    END AS is_active,
+    type AS activity_type
+FROM "postgres"."public"."activity_types"
+  );
+[0m18:23:46.048240 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m18:23:46.051673 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.052153 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types" rename to "stg_pipedrive__activity_types__dbt_backup"
+[0m18:23:46.054021 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:46.057257 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.057709 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_tmp" rename to "stg_pipedrive__activity_types"
+[0m18:23:46.059322 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:46.061215 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:23:46.061747 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.062248 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: COMMIT
+[0m18:23:46.064261 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:23:46.067023 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup"
+[0m18:23:46.067885 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__activity_types"
+[0m18:23:46.068320 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__activity_types"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types__dbt_backup" cascade
+[0m18:23:46.070718 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:23:46.072303 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__activity_types: Close
+[0m18:23:46.072888 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113dc00b0>]}
+[0m18:23:46.073635 [info ] [Thread-1 (]: 3 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__activity_types  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:23:46.074393 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__activity_types
+[0m18:23:46.074912 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:23:46.075636 [info ] [Thread-1 (]: 4 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [RUN]
+[0m18:23:46.076253 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__activity_types, now model.enpal_assessment_project.stg_pipedrive__deal_changes)
+[0m18:23:46.076697 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:23:46.079520 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.080336 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:23:46.084220 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.085296 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.085865 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: BEGIN
+[0m18:23:46.086284 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:46.103030 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:23:46.103672 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.104122 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `deal_changes` table in the `pipedrive` schema.
+-- Renaming a id column to standardise
+SELECT
+    deal_id AS id,
+    change_time,
+    changed_field_key,
+    new_value
+FROM "postgres"."public"."deal_changes"
+  );
+[0m18:23:46.106579 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:23:46.110094 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.110723 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes" rename to "stg_pipedrive__deal_changes__dbt_backup"
+[0m18:23:46.113505 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:23:46.119130 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.119778 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_tmp" rename to "stg_pipedrive__deal_changes"
+[0m18:23:46.122995 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m18:23:46.126394 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:23:46.126964 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.127400 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: COMMIT
+[0m18:23:46.129732 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:23:46.132712 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup"
+[0m18:23:46.133948 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__deal_changes"
+[0m18:23:46.134496 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__deal_changes"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes__dbt_backup" cascade
+[0m18:23:46.137617 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m18:23:46.139377 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__deal_changes: Close
+[0m18:23:46.140035 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113ef3fb0>]}
+[0m18:23:46.140784 [info ] [Thread-1 (]: 4 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__deal_changes  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:23:46.141666 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__deal_changes
+[0m18:23:46.142218 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:23:46.143115 [info ] [Thread-1 (]: 5 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__stages ... [RUN]
+[0m18:23:46.143778 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__deal_changes, now model.enpal_assessment_project.stg_pipedrive__stages)
+[0m18:23:46.144250 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:23:46.148117 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.149085 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:23:46.154166 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.155444 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.155940 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: BEGIN
+[0m18:23:46.156537 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:46.178512 [debug] [Thread-1 (]: SQL status: BEGIN in 0.022 seconds
+[0m18:23:46.179437 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.180020 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp"
+    
+    
+  as (
+    /* NOT USED. 
+    The source table has it's origins in the fields table, which is not used in the final model.
+    I would rather keep stages and lost_reasons standardised in the final model.
+    My assumption is that the fields table is used to store custom fields,
+    and if this were to be updated by a sysadmin, the static stages table would not reflect the changes.
+NOT USED. */
+
+-- This model is generated from the `stages` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    stage_id AS id,
+    stage_name
+FROM "postgres"."public"."stages"
+  );
+[0m18:23:46.183504 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.003 seconds
+[0m18:23:46.187423 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.187928 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages" rename to "stg_pipedrive__stages__dbt_backup"
+[0m18:23:46.189773 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:46.209487 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.210041 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_tmp" rename to "stg_pipedrive__stages"
+[0m18:23:46.215339 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m18:23:46.217678 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:23:46.218180 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.218708 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: COMMIT
+[0m18:23:46.221196 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:23:46.223802 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup"
+[0m18:23:46.224608 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__stages"
+[0m18:23:46.225037 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__stages"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages__dbt_backup" cascade
+[0m18:23:46.227607 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m18:23:46.229175 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__stages: Close
+[0m18:23:46.229789 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113ef6c30>]}
+[0m18:23:46.230701 [info ] [Thread-1 (]: 5 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__stages  [[32mCREATE VIEW[0m in 0.09s]
+[0m18:23:46.231638 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__stages
+[0m18:23:46.232171 [debug] [Thread-1 (]: Began running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:23:46.232882 [info ] [Thread-1 (]: 6 of 6 START sql view model public_pipedrive_analytics.stg_pipedrive__users .... [RUN]
+[0m18:23:46.233781 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enpal_assessment_project.stg_pipedrive__stages, now model.enpal_assessment_project.stg_pipedrive__users)
+[0m18:23:46.234252 [debug] [Thread-1 (]: Began compiling node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:23:46.237105 [debug] [Thread-1 (]: Writing injected SQL for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.237922 [debug] [Thread-1 (]: Began executing node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:23:46.241755 [debug] [Thread-1 (]: Writing runtime sql for node "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.242512 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.242962 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: BEGIN
+[0m18:23:46.243357 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:46.262106 [debug] [Thread-1 (]: SQL status: BEGIN in 0.019 seconds
+[0m18:23:46.262904 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.263485 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+
+  create view "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp"
+    
+    
+  as (
+    -- This model is generated from the `users` table in the `pipedrive` schema.
+-- Renaming a couple of columns to avoid using reserved keywords and standardise
+SELECT
+    id,
+    name AS user_name,
+    email AS user_email,
+    modified AS modified_date
+FROM "postgres"."public"."users"
+  );
+[0m18:23:46.266472 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.002 seconds
+[0m18:23:46.269723 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.270173 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users" rename to "stg_pipedrive__users__dbt_backup"
+[0m18:23:46.271916 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:46.275151 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.275635 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+alter table "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_tmp" rename to "stg_pipedrive__users"
+[0m18:23:46.277259 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m18:23:46.279449 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:23:46.279919 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.280381 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: COMMIT
+[0m18:23:46.282606 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:23:46.286582 [debug] [Thread-1 (]: Applying DROP to: "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup"
+[0m18:23:46.287450 [debug] [Thread-1 (]: Using postgres connection "model.enpal_assessment_project.stg_pipedrive__users"
+[0m18:23:46.287885 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "model.enpal_assessment_project.stg_pipedrive__users"} */
+drop view if exists "postgres"."public_pipedrive_analytics"."stg_pipedrive__users__dbt_backup" cascade
+[0m18:23:46.291188 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m18:23:46.292769 [debug] [Thread-1 (]: On model.enpal_assessment_project.stg_pipedrive__users: Close
+[0m18:23:46.293376 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9c88c8ad-7a82-45c3-bd95-45843b9a76ef', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113ab3b30>]}
+[0m18:23:46.294048 [info ] [Thread-1 (]: 6 of 6 OK created sql view model public_pipedrive_analytics.stg_pipedrive__users  [[32mCREATE VIEW[0m in 0.06s]
+[0m18:23:46.294767 [debug] [Thread-1 (]: Finished running node model.enpal_assessment_project.stg_pipedrive__users
+[0m18:23:46.296207 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:46.296634 [debug] [MainThread]: On master: BEGIN
+[0m18:23:46.296978 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:23:46.312052 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m18:23:46.312759 [debug] [MainThread]: On master: COMMIT
+[0m18:23:46.313443 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:46.313906 [debug] [MainThread]: On master: COMMIT
+[0m18:23:46.315307 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:23:46.315858 [debug] [MainThread]: On master: Close
+[0m18:23:46.316667 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:23:46.317260 [debug] [MainThread]: Connection 'model.enpal_assessment_project.stg_pipedrive__users' was properly closed.
+[0m18:23:46.317742 [info ] [MainThread]: 
+[0m18:23:46.318234 [info ] [MainThread]: Finished running 6 view models in 0 hours 0 minutes and 0.69 seconds (0.69s).
+[0m18:23:46.319994 [debug] [MainThread]: Command end result
+[0m18:23:46.353921 [info ] [MainThread]: 
+[0m18:23:46.354452 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:23:46.354847 [info ] [MainThread]: 
+[0m18:23:46.355262 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+[0m18:23:46.357040 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.5951395, "process_in_blocks": "0", "process_kernel_time": 0.348519, "process_mem_max_rss": "109092864", "process_out_blocks": "0", "process_user_time": 2.575022}
+[0m18:23:46.357781 [debug] [MainThread]: Command `dbt run` succeeded at 18:23:46.357646 after 1.60 seconds
+[0m18:23:46.358261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111ea4ec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11272b1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112be28d0>]}
+[0m18:23:46.358685 [debug] [MainThread]: Flushing usage events
+[0m18:23:55.986909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11264ac90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1126870e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112686c00>]}
+
+
+============================== 18:23:55.992612 | a6975bc0-8212-4f1a-8ff4-588c12261733 ==============================
+[0m18:23:55.992612 [info ] [MainThread]: Running with dbt=1.8.9
+[0m18:23:55.994090 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/julian/Documents/hatvalues_repo/dbt_enpal_assessment/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:23:56.234978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11152c560>]}
+[0m18:23:56.324253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11152c290>]}
+[0m18:23:56.325198 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m18:23:56.464218 [debug] [MainThread]: checksum: 132857a23e9d07220246854f7763165174ce9b737cfc7867629ace4294e520b1, vars: {}, profile: , target: , version: 1.8.9
+[0m18:23:56.610766 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:23:56.611226 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:23:56.671182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c85670>]}
+[0m18:23:56.819169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1136c6c00>]}
+[0m18:23:56.819751 [info ] [MainThread]: Found 6 models, 16 data tests, 6 sources, 428 macros
+[0m18:23:56.820172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112526b40>]}
+[0m18:23:56.823349 [info ] [MainThread]: 
+[0m18:23:56.824438 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:23:56.831644 [debug] [ThreadPool]: Acquiring new postgres connection 'list_postgres_public_pipedrive_analytics'
+[0m18:23:56.900152 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:23:56.900646 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: BEGIN
+[0m18:23:56.901189 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:23:56.929978 [debug] [ThreadPool]: SQL status: BEGIN in 0.029 seconds
+[0m18:23:56.930730 [debug] [ThreadPool]: Using postgres connection "list_postgres_public_pipedrive_analytics"
+[0m18:23:56.931319 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "list_postgres_public_pipedrive_analytics"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_pipedrive_analytics'
+    union all
+    select
+      'postgres' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_pipedrive_analytics'
+  
+[0m18:23:56.935722 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.004 seconds
+[0m18:23:56.937453 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: ROLLBACK
+[0m18:23:56.938676 [debug] [ThreadPool]: On list_postgres_public_pipedrive_analytics: Close
+[0m18:23:56.945186 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:56.945629 [debug] [MainThread]: On master: BEGIN
+[0m18:23:56.945971 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:23:56.964461 [debug] [MainThread]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:56.964977 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:56.965461 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:23:56.970340 [debug] [MainThread]: SQL status: SELECT 6 in 0.004 seconds
+[0m18:23:56.971897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6975bc0-8212-4f1a-8ff4-588c12261733', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11367f2c0>]}
+[0m18:23:56.972388 [debug] [MainThread]: On master: ROLLBACK
+[0m18:23:56.973784 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:56.974197 [debug] [MainThread]: On master: BEGIN
+[0m18:23:56.976123 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:23:56.976714 [debug] [MainThread]: On master: COMMIT
+[0m18:23:56.977105 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:56.977503 [debug] [MainThread]: On master: COMMIT
+[0m18:23:56.978715 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:23:56.979157 [debug] [MainThread]: On master: Close
+[0m18:23:56.979689 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:23:56.980158 [info ] [MainThread]: 
+[0m18:23:56.982910 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0
+[0m18:23:56.983482 [info ] [Thread-1 (]: 1 of 16 START test accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time  [RUN]
+[0m18:23:56.984109 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_postgres_public_pipedrive_analytics, now test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0)
+[0m18:23:56.984758 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0
+[0m18:23:57.008834 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0"
+[0m18:23:57.011232 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0
+[0m18:23:57.032697 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0"
+[0m18:23:57.034170 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0"
+[0m18:23:57.034709 [debug] [Thread-1 (]: On test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0: BEGIN
+[0m18:23:57.035128 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.050939 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m18:23:57.051819 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0"
+[0m18:23:57.052335 [debug] [Thread-1 (]: On test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        changed_field_key as value_field,
+        count(*) as n_records
+
+    from "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes"
+    group by changed_field_key
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'user_id','stage_id','lost_reason','add_time'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.056825 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m18:23:57.061521 [debug] [Thread-1 (]: On test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0: ROLLBACK
+[0m18:23:57.062902 [debug] [Thread-1 (]: On test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0: Close
+[0m18:23:57.063693 [info ] [Thread-1 (]: 1 of 16 PASS accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time  [[32mPASS[0m in 0.08s]
+[0m18:23:57.064486 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0
+[0m18:23:57.065042 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.assert_change_stage_references_stage_id
+[0m18:23:57.065571 [info ] [Thread-1 (]: 2 of 16 START test assert_change_stage_references_stage_id ..................... [RUN]
+[0m18:23:57.066240 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.accepted_values_stg_pipedrive__deal_changes_changed_field_key__user_id__stage_id__lost_reason__add_time.84526954c0, now test.enpal_assessment_project.assert_change_stage_references_stage_id)
+[0m18:23:57.066715 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.assert_change_stage_references_stage_id
+[0m18:23:57.069933 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.assert_change_stage_references_stage_id"
+[0m18:23:57.070822 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.assert_change_stage_references_stage_id
+[0m18:23:57.073523 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.assert_change_stage_references_stage_id"
+[0m18:23:57.075033 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.assert_change_stage_references_stage_id"
+[0m18:23:57.075837 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_stage_references_stage_id: BEGIN
+[0m18:23:57.076353 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.096037 [debug] [Thread-1 (]: SQL status: BEGIN in 0.020 seconds
+[0m18:23:57.096663 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.assert_change_stage_references_stage_id"
+[0m18:23:57.097117 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_stage_references_stage_id: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.assert_change_stage_references_stage_id"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      -- CTE to pre-filter deal_changes for stage_id changes
+-- to safely cast new_value to an integer when we're sure all the values can be implicitly casted
+WITH deal_change_stage AS (
+	SELECT changed_field_key, new_value FROM deal_changes
+	WHERE changed_field_key = 'stage_id'
+)
+SELECT *
+FROM deal_change_stage d
+LEFT OUTER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__stages" s
+ON CAST(d.new_value AS INTEGER) = s.id
+WHERE s.id IS NULL -- Any non referential values in d will return a NULL s.id
+      
+    ) dbt_internal_test
+[0m18:23:57.103400 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.006 seconds
+[0m18:23:57.105252 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_stage_references_stage_id: ROLLBACK
+[0m18:23:57.106714 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_stage_references_stage_id: Close
+[0m18:23:57.108095 [info ] [Thread-1 (]: 2 of 16 PASS assert_change_stage_references_stage_id ........................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.109012 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.assert_change_stage_references_stage_id
+[0m18:23:57.109737 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.assert_change_user_references_user_id
+[0m18:23:57.110362 [info ] [Thread-1 (]: 3 of 16 START test assert_change_user_references_user_id ....................... [RUN]
+[0m18:23:57.110994 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.assert_change_stage_references_stage_id, now test.enpal_assessment_project.assert_change_user_references_user_id)
+[0m18:23:57.111469 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.assert_change_user_references_user_id
+[0m18:23:57.115561 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.assert_change_user_references_user_id"
+[0m18:23:57.116463 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.assert_change_user_references_user_id
+[0m18:23:57.119008 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.assert_change_user_references_user_id"
+[0m18:23:57.119877 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.assert_change_user_references_user_id"
+[0m18:23:57.120302 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_user_references_user_id: BEGIN
+[0m18:23:57.120690 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.141430 [debug] [Thread-1 (]: SQL status: BEGIN in 0.020 seconds
+[0m18:23:57.142107 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.assert_change_user_references_user_id"
+[0m18:23:57.142576 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_user_references_user_id: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.assert_change_user_references_user_id"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      -- CTE to pre-filter deal_changes for stage_id changes
+-- to safely cast new_value to an integer when we're sure all the values can be implicitly casted
+WITH deal_change_user AS (
+	SELECT changed_field_key, new_value FROM deal_changes
+	WHERE changed_field_key = 'user_id'
+)
+SELECT *
+FROM deal_change_user d
+LEFT OUTER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__users" u
+ON CAST(d.new_value AS INTEGER) = u.id
+WHERE u.id IS NULL -- Any non referential values in d will return a NULL s.id
+      
+    ) dbt_internal_test
+[0m18:23:57.147761 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m18:23:57.149721 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_user_references_user_id: ROLLBACK
+[0m18:23:57.151221 [debug] [Thread-1 (]: On test.enpal_assessment_project.assert_change_user_references_user_id: Close
+[0m18:23:57.152045 [info ] [Thread-1 (]: 3 of 16 PASS assert_change_user_references_user_id ............................. [[32mPASS[0m in 0.04s]
+[0m18:23:57.152963 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.assert_change_user_references_user_id
+[0m18:23:57.153640 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e
+[0m18:23:57.154155 [info ] [Thread-1 (]: 4 of 16 START test not_null_stg_pipedrive__activity_deal_id .................... [RUN]
+[0m18:23:57.154800 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.assert_change_user_references_user_id, now test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e)
+[0m18:23:57.155291 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e
+[0m18:23:57.165413 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e"
+[0m18:23:57.166899 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e
+[0m18:23:57.169659 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e"
+[0m18:23:57.170540 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e"
+[0m18:23:57.171011 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e: BEGIN
+[0m18:23:57.171451 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.189911 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.190558 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e"
+[0m18:23:57.191024 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select deal_id
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+where deal_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.194288 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:23:57.196084 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e: ROLLBACK
+[0m18:23:57.197339 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e: Close
+[0m18:23:57.198103 [info ] [Thread-1 (]: 4 of 16 PASS not_null_stg_pipedrive__activity_deal_id .......................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.198919 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e
+[0m18:23:57.199472 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5
+[0m18:23:57.200015 [info ] [Thread-1 (]: 5 of 16 START test not_null_stg_pipedrive__activity_due_date ................... [RUN]
+[0m18:23:57.200835 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__activity_deal_id.baf61bb80e, now test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5)
+[0m18:23:57.201325 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5
+[0m18:23:57.205872 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5"
+[0m18:23:57.207244 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5
+[0m18:23:57.210239 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5"
+[0m18:23:57.211542 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5"
+[0m18:23:57.211999 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5: BEGIN
+[0m18:23:57.212407 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.228167 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m18:23:57.228856 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5"
+[0m18:23:57.229315 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select due_date
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+where due_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.231989 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.233667 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5: ROLLBACK
+[0m18:23:57.234943 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5: Close
+[0m18:23:57.235683 [info ] [Thread-1 (]: 5 of 16 PASS not_null_stg_pipedrive__activity_due_date ......................... [[32mPASS[0m in 0.03s]
+[0m18:23:57.236416 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5
+[0m18:23:57.237004 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb
+[0m18:23:57.237575 [info ] [Thread-1 (]: 6 of 16 START test not_null_stg_pipedrive__activity_id ......................... [RUN]
+[0m18:23:57.238591 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__activity_due_date.34a6e1c8f5, now test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb)
+[0m18:23:57.239295 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb
+[0m18:23:57.244141 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb"
+[0m18:23:57.244976 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb
+[0m18:23:57.247351 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb"
+[0m18:23:57.248596 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb"
+[0m18:23:57.249047 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb: BEGIN
+[0m18:23:57.249450 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.266577 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:23:57.267467 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb"
+[0m18:23:57.268100 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.271033 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.272919 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb: ROLLBACK
+[0m18:23:57.274245 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb: Close
+[0m18:23:57.274979 [info ] [Thread-1 (]: 6 of 16 PASS not_null_stg_pipedrive__activity_id ............................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.275708 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb
+[0m18:23:57.276219 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543
+[0m18:23:57.276726 [info ] [Thread-1 (]: 7 of 16 START test not_null_stg_pipedrive__activity_is_done .................... [RUN]
+[0m18:23:57.277415 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__activity_id.5590c96fbb, now test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543)
+[0m18:23:57.278007 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543
+[0m18:23:57.282424 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543"
+[0m18:23:57.283286 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543
+[0m18:23:57.286059 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543"
+[0m18:23:57.287323 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543"
+[0m18:23:57.287819 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543: BEGIN
+[0m18:23:57.288236 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.305122 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:23:57.305760 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543"
+[0m18:23:57.306217 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select is_done
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+where is_done is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.308703 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.310410 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543: ROLLBACK
+[0m18:23:57.311751 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543: Close
+[0m18:23:57.312481 [info ] [Thread-1 (]: 7 of 16 PASS not_null_stg_pipedrive__activity_is_done .......................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.313234 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543
+[0m18:23:57.313813 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d
+[0m18:23:57.314396 [info ] [Thread-1 (]: 8 of 16 START test not_null_stg_pipedrive__deal_changes_change_time ............ [RUN]
+[0m18:23:57.315325 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__activity_is_done.1d7811c543, now test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d)
+[0m18:23:57.315852 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d
+[0m18:23:57.321024 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d"
+[0m18:23:57.322249 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d
+[0m18:23:57.326731 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d"
+[0m18:23:57.327893 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d"
+[0m18:23:57.329031 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d: BEGIN
+[0m18:23:57.330138 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.352679 [debug] [Thread-1 (]: SQL status: BEGIN in 0.023 seconds
+[0m18:23:57.353261 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d"
+[0m18:23:57.353837 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select change_time
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes"
+where change_time is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.356905 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:23:57.358882 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d: ROLLBACK
+[0m18:23:57.360241 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d: Close
+[0m18:23:57.361043 [info ] [Thread-1 (]: 8 of 16 PASS not_null_stg_pipedrive__deal_changes_change_time .................. [[32mPASS[0m in 0.05s]
+[0m18:23:57.362059 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d
+[0m18:23:57.362606 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f
+[0m18:23:57.363125 [info ] [Thread-1 (]: 9 of 16 START test not_null_stg_pipedrive__deal_changes_id ..................... [RUN]
+[0m18:23:57.363791 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_change_time.aa9805807d, now test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f)
+[0m18:23:57.364341 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f
+[0m18:23:57.370208 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f"
+[0m18:23:57.371403 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f
+[0m18:23:57.373808 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f"
+[0m18:23:57.374553 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f"
+[0m18:23:57.374986 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f: BEGIN
+[0m18:23:57.375383 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.393864 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.394539 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f"
+[0m18:23:57.394991 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.397981 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:23:57.399735 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f: ROLLBACK
+[0m18:23:57.401295 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f: Close
+[0m18:23:57.402177 [info ] [Thread-1 (]: 9 of 16 PASS not_null_stg_pipedrive__deal_changes_id ........................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.402986 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f
+[0m18:23:57.403568 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96
+[0m18:23:57.404246 [info ] [Thread-1 (]: 10 of 16 START test not_null_stg_pipedrive__deal_changes_new_value ............. [RUN]
+[0m18:23:57.404975 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_id.f7666d095f, now test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96)
+[0m18:23:57.405889 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96
+[0m18:23:57.411621 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96"
+[0m18:23:57.413012 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96
+[0m18:23:57.415654 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96"
+[0m18:23:57.416562 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96"
+[0m18:23:57.417028 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96: BEGIN
+[0m18:23:57.417430 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.435368 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.436271 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96"
+[0m18:23:57.437134 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select new_value
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__deal_changes"
+where new_value is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.440832 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m18:23:57.442851 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96: ROLLBACK
+[0m18:23:57.444400 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96: Close
+[0m18:23:57.445134 [info ] [Thread-1 (]: 10 of 16 PASS not_null_stg_pipedrive__deal_changes_new_value ................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.445963 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96
+[0m18:23:57.446477 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817
+[0m18:23:57.446921 [info ] [Thread-1 (]: 11 of 16 START test not_null_stg_pipedrive__users_id ........................... [RUN]
+[0m18:23:57.447613 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__deal_changes_new_value.bb225b4f96, now test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817)
+[0m18:23:57.448078 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817
+[0m18:23:57.452494 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817"
+[0m18:23:57.453354 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817
+[0m18:23:57.455846 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817"
+[0m18:23:57.456721 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817"
+[0m18:23:57.457260 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817: BEGIN
+[0m18:23:57.457673 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.476085 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.476829 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817"
+[0m18:23:57.477284 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__users"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.479766 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.481750 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817: ROLLBACK
+[0m18:23:57.483350 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817: Close
+[0m18:23:57.484076 [info ] [Thread-1 (]: 11 of 16 PASS not_null_stg_pipedrive__users_id ................................. [[32mPASS[0m in 0.04s]
+[0m18:23:57.485092 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817
+[0m18:23:57.485689 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86
+[0m18:23:57.486143 [info ] [Thread-1 (]: 12 of 16 START test not_null_stg_pipedrive__users_modified_date ................ [RUN]
+[0m18:23:57.486837 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__users_id.2e370a8817, now test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86)
+[0m18:23:57.487303 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86
+[0m18:23:57.491780 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86"
+[0m18:23:57.492653 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86
+[0m18:23:57.495154 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86"
+[0m18:23:57.495988 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86"
+[0m18:23:57.496424 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86: BEGIN
+[0m18:23:57.496824 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.514667 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.515517 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86"
+[0m18:23:57.516020 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select modified_date
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__users"
+where modified_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.518566 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.520293 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86: ROLLBACK
+[0m18:23:57.521763 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86: Close
+[0m18:23:57.522513 [info ] [Thread-1 (]: 12 of 16 PASS not_null_stg_pipedrive__users_modified_date ...................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.523274 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86
+[0m18:23:57.523975 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157
+[0m18:23:57.524518 [info ] [Thread-1 (]: 13 of 16 START test not_null_stg_pipedrive__users_user_email ................... [RUN]
+[0m18:23:57.525206 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__users_modified_date.47e8280b86, now test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157)
+[0m18:23:57.525683 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157
+[0m18:23:57.530207 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157"
+[0m18:23:57.531082 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157
+[0m18:23:57.533780 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157"
+[0m18:23:57.534837 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157"
+[0m18:23:57.535441 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157: BEGIN
+[0m18:23:57.535990 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.553691 [debug] [Thread-1 (]: SQL status: BEGIN in 0.018 seconds
+[0m18:23:57.554453 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157"
+[0m18:23:57.554937 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select user_email
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__users"
+where user_email is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.557356 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.559331 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157: ROLLBACK
+[0m18:23:57.560711 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157: Close
+[0m18:23:57.561520 [info ] [Thread-1 (]: 13 of 16 PASS not_null_stg_pipedrive__users_user_email ......................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.562405 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157
+[0m18:23:57.563056 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5
+[0m18:23:57.563563 [info ] [Thread-1 (]: 14 of 16 START test not_null_stg_pipedrive__users_user_name .................... [RUN]
+[0m18:23:57.564133 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__users_user_email.ea967e8157, now test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5)
+[0m18:23:57.564583 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5
+[0m18:23:57.568909 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5"
+[0m18:23:57.569766 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5
+[0m18:23:57.572131 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5"
+[0m18:23:57.572891 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5"
+[0m18:23:57.573327 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5: BEGIN
+[0m18:23:57.573962 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.591298 [debug] [Thread-1 (]: SQL status: BEGIN in 0.017 seconds
+[0m18:23:57.592219 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5"
+[0m18:23:57.592805 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select user_name
+from "postgres"."public_pipedrive_analytics"."stg_pipedrive__users"
+where user_name is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.595287 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m18:23:57.597176 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5: ROLLBACK
+[0m18:23:57.598636 [debug] [Thread-1 (]: On test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5: Close
+[0m18:23:57.599347 [info ] [Thread-1 (]: 14 of 16 PASS not_null_stg_pipedrive__users_user_name .......................... [[32mPASS[0m in 0.04s]
+[0m18:23:57.600259 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5
+[0m18:23:57.600884 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8
+[0m18:23:57.601381 [info ] [Thread-1 (]: 15 of 16 START test relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_  [RUN]
+[0m18:23:57.602104 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.not_null_stg_pipedrive__users_user_name.3145d7edb5, now test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8)
+[0m18:23:57.602571 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8
+[0m18:23:57.613288 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8"
+[0m18:23:57.614146 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8
+[0m18:23:57.617122 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8"
+[0m18:23:57.618066 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8"
+[0m18:23:57.618592 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8: BEGIN
+[0m18:23:57.619006 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.638193 [debug] [Thread-1 (]: SQL status: BEGIN in 0.019 seconds
+[0m18:23:57.638888 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8"
+[0m18:23:57.639546 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select activity_type as from_field
+    from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+    where activity_type is not null
+),
+
+parent as (
+    select activity_type as to_field
+    from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.644213 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m18:23:57.646012 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8: ROLLBACK
+[0m18:23:57.647545 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8: Close
+[0m18:23:57.648292 [info ] [Thread-1 (]: 15 of 16 PASS relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_  [[32mPASS[0m in 0.05s]
+[0m18:23:57.649125 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8
+[0m18:23:57.649809 [debug] [Thread-1 (]: Began running node test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d
+[0m18:23:57.650394 [info ] [Thread-1 (]: 16 of 16 START test relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_  [RUN]
+[0m18:23:57.651437 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enpal_assessment_project.relationships_stg_pipedrive__activity_activity_type__activity_type__ref_stg_pipedrive__activity_types_.7370c13ee8, now test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d)
+[0m18:23:57.651927 [debug] [Thread-1 (]: Began compiling node test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d
+[0m18:23:57.658756 [debug] [Thread-1 (]: Writing injected SQL for node "test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d"
+[0m18:23:57.659611 [debug] [Thread-1 (]: Began executing node test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d
+[0m18:23:57.662026 [debug] [Thread-1 (]: Writing runtime sql for node "test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d"
+[0m18:23:57.662854 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d"
+[0m18:23:57.663295 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d: BEGIN
+[0m18:23:57.663697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:23:57.680065 [debug] [Thread-1 (]: SQL status: BEGIN in 0.016 seconds
+[0m18:23:57.680931 [debug] [Thread-1 (]: Using postgres connection "test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d"
+[0m18:23:57.681454 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d: /* {"app": "dbt", "dbt_version": "1.8.9", "profile_name": "enpal_assessment_project", "target_name": "dev", "node_id": "test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with child as (
+    select user_id as from_field
+    from "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity"
+    where user_id is not null
+),
+
+parent as (
+    select id as to_field
+    from "postgres"."public_pipedrive_analytics"."stg_pipedrive__users"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+      
+    ) dbt_internal_test
+[0m18:23:57.685610 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m18:23:57.687357 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d: ROLLBACK
+[0m18:23:57.688725 [debug] [Thread-1 (]: On test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d: Close
+[0m18:23:57.689468 [info ] [Thread-1 (]: 16 of 16 PASS relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_  [[32mPASS[0m in 0.04s]
+[0m18:23:57.690298 [debug] [Thread-1 (]: Finished running node test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d
+[0m18:23:57.692063 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:57.692497 [debug] [MainThread]: On master: BEGIN
+[0m18:23:57.692833 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:23:57.708168 [debug] [MainThread]: SQL status: BEGIN in 0.015 seconds
+[0m18:23:57.708808 [debug] [MainThread]: On master: COMMIT
+[0m18:23:57.709203 [debug] [MainThread]: Using postgres connection "master"
+[0m18:23:57.709547 [debug] [MainThread]: On master: COMMIT
+[0m18:23:57.710792 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m18:23:57.711230 [debug] [MainThread]: On master: Close
+[0m18:23:57.711747 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:23:57.712134 [debug] [MainThread]: Connection 'test.enpal_assessment_project.relationships_stg_pipedrive__activity_user_id__id__ref_stg_pipedrive__users_.d7739cfd5d' was properly closed.
+[0m18:23:57.712609 [info ] [MainThread]: 
+[0m18:23:57.713027 [info ] [MainThread]: Finished running 16 data tests in 0 hours 0 minutes and 0.89 seconds (0.89s).
+[0m18:23:57.717095 [debug] [MainThread]: Command end result
+[0m18:23:57.753080 [info ] [MainThread]: 
+[0m18:23:57.753607 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:23:57.754004 [info ] [MainThread]: 
+[0m18:23:57.754530 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=0 SKIP=0 TOTAL=16
+[0m18:23:57.756272 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.8496327, "process_in_blocks": "0", "process_kernel_time": 0.383495, "process_mem_max_rss": "111673344", "process_out_blocks": "0", "process_user_time": 2.773407}
+[0m18:23:57.757095 [debug] [MainThread]: Command `dbt test` succeeded at 18:23:57.756895 after 1.85 seconds
+[0m18:23:57.757643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e9a2d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112686ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112686de0>]}
+[0m18:23:57.758144 [debug] [MainThread]: Flushing usage events
