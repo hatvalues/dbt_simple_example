@@ -5,6 +5,8 @@
 SELECT
 	deal_id,
 	new_value AS user_id,
-	change_time
+	change_time,
+	month_name,
+	month_number
 FROM {{ ref('stg_pipedrive__deal_changes') }}
 WHERE changed_field_key = 'user_id'

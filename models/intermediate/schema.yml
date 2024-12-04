@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_deal_changes_dedupe_new_deals
+  - name: int_deal_changes_dedupe_new_deal
     columns:
       - name: deal_id
         tests:
