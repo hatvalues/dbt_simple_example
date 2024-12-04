@@ -12,6 +12,6 @@ SELECT
     assigned_to_user AS user_id,
     deal_id,
     done AS is_done,
-    due_to AS due_date
+    due_to::TIMESTAMP AS due_time
 FROM "postgres"."public"."activity"
   );

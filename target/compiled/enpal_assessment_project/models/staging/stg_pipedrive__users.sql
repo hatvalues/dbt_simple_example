@@ -4,5 +4,5 @@ SELECT
     id,
     name AS user_name,
     email AS user_email,
-    modified AS modified_date
+    modified::TIMESTAMP AS modified_time
 FROM "postgres"."public"."users"

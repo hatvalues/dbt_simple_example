@@ -22,7 +22,7 @@ models:
       - name: is_done
         tests:
           - not_null
-      - name: due_date
+      - name: due_time
         tests:
           - not_null
   - name: stg_pipedrive__deal_changes
@@ -51,7 +51,7 @@ models:
       - name: user_email
         tests:
           - not_null
-      - name: modified_date
+      - name: modified_time
         tests:
           - not_null
       
