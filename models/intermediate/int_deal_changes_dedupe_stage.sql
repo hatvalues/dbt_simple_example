@@ -14,11 +14,24 @@ WITH deal_changes_stage AS (
 		month_number
 	FROM {{ ref('stg_pipedrive__deal_changes') }}
 	WHERE changed_field_key = 'stage_id'
+),
+deal_changes_stage_cast_id AS (
+	SELECT
+		deal_id,
+		CAST(stage_id AS INTEGER) AS stage_id, -- do it here once rather than twice in the final select & join clauses
+		change_time,
+		month_name,
+		month_number
+	FROM deal_changes_stage
+	WHERE reverse_order = 1
 )
 SELECT
-deal_id,
-stage_id,
-change_time,
-month_name,
-month_number
-FROM deal_changes_stage WHERE reverse_order = 1
+dcs.deal_id,
+dcs.stage_id,
+stages.label,
+dcs.change_time,
+dcs.month_name,
+dcs.month_number
+FROM deal_changes_stage_cast_id dcs
+INNER JOIN {{ ref('stg_pipedrive__fields_stages') }} stages
+ON dcs.stage_id = stages.id

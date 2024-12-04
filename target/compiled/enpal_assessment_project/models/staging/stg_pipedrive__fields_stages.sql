@@ -9,5 +9,5 @@ WITH expand_array AS (
 )
 SELECT
 	CAST(field_value_options ->> 'id' AS INTEGER) AS id,
-	field_value_options ->> 'label' AS stage_name
+	field_value_options ->> 'label' AS label
 FROM expand_array

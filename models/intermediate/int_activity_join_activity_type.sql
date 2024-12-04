@@ -8,6 +8,8 @@ SELECT
 	a.deal_id,
 	t.activity_name,
 	t.activity_is_active,
+	ms.stage_id,
+	ms.minor_stage_id,
 	a.is_done,
 	a.due_time,
 	a.month_name,
@@ -15,3 +17,6 @@ SELECT
 FROM {{ ref('stg_pipedrive__activity') }} a
 INNER JOIN {{ ref('stg_pipedrive__activity_types') }} t
 	ON a.activity_type = t.activity_type
+INNER JOIN {{ ref('minor_stages')}} ms
+	ON t.activity_type = ms.activity_type
+WHERE t.activity_is_active = TRUE

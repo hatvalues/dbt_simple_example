@@ -9,6 +9,8 @@ SELECT
 	a.deal_id,
 	t.activity_name,
 	t.activity_is_active,
+	ms.stage_id,
+	ms.minor_stage_id,
 	a.is_done,
 	a.due_time,
 	a.month_name,
@@ -16,6 +18,9 @@ SELECT
 FROM "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity" a
 INNER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_types" t
 	ON a.activity_type = t.activity_type
+INNER JOIN "postgres"."public"."minor_stages" ms
+	ON t.activity_type = ms.activity_type
+WHERE t.activity_is_active = TRUE
 ) -- brings in the activity data for each deal in the deal_changes table
 -- Note that there are very few rows compared to the total number of deals
 -- These will just be the ones with call activities against them

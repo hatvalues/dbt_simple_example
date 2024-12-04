@@ -9,8 +9,12 @@
   
   (
     SELECT
-    nd.deal_id,
-    nd.created_time
-FROM "postgres"."public_pipedrive_analytics"."int_deal_changes_dedupe_new_deal" nd
+    deal_id,
+    stage_id,
+    label,
+    NULL AS minor_stage_id,
+    month_name,
+    month_number
+FROM "postgres"."public_pipedrive_analytics"."int_deal_changes_dedupe_stage"
   );
   
