@@ -33,8 +33,8 @@ SELECT
     act.activity_name,
     act.stage_id,
     act.minor_stage_id,
-    act.is_active,
-    act.is_done,
+    act.is_active, -- this would be a mart level filter: business logic determines when to include deactivated activity types
+    act.is_done, -- this would be a report level filter: analyst determines when to exclude incomplete activities
     act.month_number,
     act.month_name
 FROM "postgres"."public_pipedrive_analytics"."int_deal_changes_dedupe_new_deal" nd
