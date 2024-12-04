@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_deal_changes_dedupe_new_deals
+    columns:
+      - name: deal_id
+        tests:
+          - unique
+  - name: int_deal_changes_dedupe_lost_reason
+    columns:
+      - name: deal_id
+        tests:
+          - unique
