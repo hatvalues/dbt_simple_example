@@ -8,10 +8,10 @@ SELECT
 	a.user_id,
 	a.deal_id,
 	t.activity_name,
-	t.activity_is_active,
 	ms.stage_id,
 	ms.minor_stage_id,
-	a.is_done,
+	t.is_active, -- this would be a mart level filter: business logic determines when to include deactivated activity types
+	a.is_done, -- this would be a report level filter: analyst determines when to exclude incomplete activities
 	a.due_time,
 	a.month_name,
 	a.month_number
@@ -20,14 +20,15 @@ INNER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_type
 	ON a.activity_type = t.activity_type
 INNER JOIN "postgres"."public"."minor_stages" ms
 	ON t.activity_type = ms.activity_type
-WHERE t.activity_is_active = TRUE
 ) -- brings in the activity data for each deal in the deal_changes table
 -- Note that there are very few rows compared to the total number of deals
 -- These will just be the ones with call activities against them
 SELECT
     nd.deal_id,
     act.activity_name,
-    act.activity_is_active,
+    act.stage_id,
+    act.minor_stage_id,
+    act.is_active,
     act.is_done,
     act.month_number,
     act.month_name
