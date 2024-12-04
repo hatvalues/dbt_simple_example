@@ -2,7 +2,7 @@
 -- Renaming a id column to standardise
 SELECT
     deal_id AS id,
-    change_time,
+    change_time::TIMESTAMP AS change_time,
     changed_field_key,
     new_value
 FROM {{ source('postgres_public','deal_changes') }}
