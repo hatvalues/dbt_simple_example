@@ -4,7 +4,9 @@
 SELECT
     nd.deal_id,
     act.activity_name,
-    act.activity_is_active,
+    act.stage_id,
+    act.minor_stage_id,
+    act.is_active,
     act.is_done,
     act.month_number,
     act.month_name

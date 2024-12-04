@@ -7,10 +7,10 @@ SELECT
 	a.user_id,
 	a.deal_id,
 	t.activity_name,
-	t.activity_is_active,
 	ms.stage_id,
 	ms.minor_stage_id,
-	a.is_done,
+	t.is_active, -- this would be a mart level filter: business logic determines when to include deactivated activity types
+	a.is_done, -- this would be a report level filter: analyst determines when to exclude incomplete activities
 	a.due_time,
 	a.month_name,
 	a.month_number
@@ -19,4 +19,3 @@ INNER JOIN "postgres"."public_pipedrive_analytics"."stg_pipedrive__activity_type
 	ON a.activity_type = t.activity_type
 INNER JOIN "postgres"."public"."minor_stages" ms
 	ON t.activity_type = ms.activity_type
-WHERE t.activity_is_active = TRUE
