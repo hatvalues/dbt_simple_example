@@ -9,8 +9,16 @@ WITH deal_changes_stage AS (
 		ROW_NUMBER() OVER(PARTITION BY deal_id, new_value ORDER BY new_value, change_time DESC) AS reverse_order,
 		deal_id,
 		new_value AS stage_id,
-		change_time
+		change_time,
+		month_name,
+		month_number
 	FROM {{ ref('stg_pipedrive__deal_changes') }}
 	WHERE changed_field_key = 'stage_id'
 )
-SELECT * FROM deal_changes_stage WHERE reverse_order = 1
+SELECT
+deal_id,
+stage_id,
+change_time,
+month_name,
+month_number
+FROM deal_changes_stage WHERE reverse_order = 1
