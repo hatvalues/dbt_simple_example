@@ -1,9 +1,11 @@
 -- ASSUMPTIONS FOR THIS MODEL:
 -- Show the number of deals in each stage of the sales funnel, for each month
     -- Although we have models for users, they are not needed/requested in this model
-    -- Although we have models for lost deals, we are showing the stage the deal was in at the time of the activity 
-        -- whether it was closed or not in the end
-    
+    -- Although we have models for lost deals
+        -- we are showing the stage the deal was in at the time of the activity 
+        -- whether or not it was closed in the end
+        -- If it was not closed in the end, it just doesn't get counted in the Closing or later stages
+        -- so it doesn't appear necessary to use the lost reasons model
 
 -- create the funnel steps as requested
 WITH funnel_step_from_stages AS (
@@ -36,6 +38,7 @@ monthly_agg AS (
 		funnel_step,
 		kpi_name
 )
+-- final query with ordering
 SELECT
 	month_name AS month,
 	kpi_name,
