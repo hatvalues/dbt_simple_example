@@ -1,4 +1,9 @@
 SELECT
-    nd.deal_id,
-    nd.created_time
-FROM {{ ref('int_deal_changes_dedupe_new_deal') }} nd
+    deal_id,
+    stage_id,
+    label,
+    NULL AS minor_stage_id,
+    month_name,
+    month_number
+FROM {{ ref('int_deal_changes_dedupe_stage') }}
+
