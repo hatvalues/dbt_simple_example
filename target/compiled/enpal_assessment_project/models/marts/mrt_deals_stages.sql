@@ -3,6 +3,7 @@ WITH all_deal_changes_and_activity AS (
         deal_id,
         stage_id,
         minor_stage_id,
+        is_done, -- this would be a report level filter: analyst determines when to exclude incomplete activities
         activity_name AS label,
         month_name,
         month_number
@@ -13,6 +14,7 @@ WITH all_deal_changes_and_activity AS (
         deal_id,
         stage_id,
         NULL AS minor_stage_id,
+        NULL AS is_done,
         label,
         month_name,
         month_number
@@ -22,6 +24,7 @@ SELECT
     nd.deal_id,
     dca.stage_id,
     dca.minor_stage_id,
+    dca.is_done,
     dca.label,
     dca.month_name,
     dca.month_number
