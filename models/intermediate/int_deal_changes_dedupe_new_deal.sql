@@ -1,6 +1,13 @@
--- Separate new deals model from the deal_changes model
--- There are a handful of dupe deals in the deal_changes model (assumption - deals should not have more than one added date)
--- Materialize as a view so it can be tested for deduplication
+-- This intermediate model does the following:
+	-- Separates new deals from the deal_changes model
+	-- Deduplicates a handful of dupe deals in the deal_changes model
+	  -- Assumption: deals should not have more than one added date
+	  -- Assumption: the latest added date is the one that should be presented to the model
+	  -- Method: simple MAX
+
+-- materialized view to apply built-in test unique values after dedupe
+{{ config(materialized='view') }}
+
 SELECT
 	deal_id, 
 	MAX(change_time) AS created_time

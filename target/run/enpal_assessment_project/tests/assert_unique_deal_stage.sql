@@ -3,7 +3,8 @@ select
       count(*) != 0 as should_warn,
       count(*) != 0 as should_error
     from (
-      SELECT
+      -- Assert that there are no duplicate deal-stage pairs in the deal changes table
+SELECT
     COUNT(*),
     deal_id,
     stage_id

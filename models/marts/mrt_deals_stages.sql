@@ -1,3 +1,4 @@
+-- This mart model provides a breakdown by month of all deals and their stages, minor stages, and activities.
 WITH all_deal_changes_and_activity AS (
     SELECT
         deal_id,

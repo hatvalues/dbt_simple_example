@@ -3,8 +3,9 @@
     
     
   as (
-    -- This model is generated from the `users` table in the `pipedrive` schema.
--- Renaming a couple of columns to avoid using reserved keywords and standardise
+    -- Name is a reserved keyword. Renaming.
+-- Convert date strings to timestamps and rename
+-- Add calculated month fields that will be used downstream
 WITH base_users AS (
     SELECT
         id,
