@@ -1,3 +1,8 @@
+/* NOT USED UPSTREAM. 
+    The requested report does not call for user information, so this model is not used anywhere upstream.
+	This model is created for completeness of the investigative aspects of the task.
+NOT USED UPSTREAM. */
+
 -- Name is a reserved keyword. Renaming.
 -- Convert date strings to timestamps and rename
 -- Add calculated month fields that will be used downstream

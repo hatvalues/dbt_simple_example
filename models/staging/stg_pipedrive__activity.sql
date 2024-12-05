@@ -4,6 +4,12 @@
     -- bools are prefixed with is_ or has_
     -- convert date strings to timestamps and rename
 -- add calculated month fields that will be used downstream
+
+-- Potential problem? Activity ids are not unique on their own.
+    -- Combinations repeating activity id with all other columns
+    -- Not useful to create a composite unique check
+    -- Does not seem to affect the overall task because the relationship to deal_id is more important
+
 WITH base_activity AS (
     SELECT
         activity_id AS id,
