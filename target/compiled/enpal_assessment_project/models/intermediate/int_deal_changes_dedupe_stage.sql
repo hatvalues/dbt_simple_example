@@ -1,9 +1,17 @@
--- Separate new deals model from the deal_changes model
--- There are a handful of dupe deals in the deal_changes model (assumption - deals should not have more of each stage id)
--- Materialize as a view so it can be tested for deduplication
--- Method: row_number in reverse order and then pick the first row. 
--- This pattern is better because we don't know how many duplicate rows there could be, but the latest will always be row number 1.
--- Can't just take MAX(new_value) as was done for new_deals, because there are multiple stage_ids and all that appear need to be presented to the model.
+-- This intermediate model does the following:
+	-- Separates the stages from the deal_changes model
+	-- Adds the friendly stages label to the deal_changes data.
+	-- Deduplicates a handful of dupe deals in the deal_changes model
+		-- Assumption: deals should not arrive at the same stage more than once
+			-- Note: it might be possible in the real world, but this rule was checked by looking at the deals that also had more than one add date, which definitely seems incorrect.
+		-- Assumption: the latest lost reason is the one that should be presented to the model
+		-- Method: row_number in reverse order and then pick the first row. 
+		-- This pattern is better when we don't know how many duplicate rows there could be, but the latest will always be row number 1.
+		-- Can't just take MAX(new_value) as was done for new_deals, because that would pick the largest given lost reason id, which would be incorrect.
+
+-- materialized view to apply built-in test unique values after dedupe
+
+
 WITH deal_changes_stage AS (
 	SELECT
 		ROW_NUMBER() OVER(PARTITION BY deal_id, new_value ORDER BY new_value, change_time DESC) AS reverse_order,

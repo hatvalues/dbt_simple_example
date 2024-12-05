@@ -1,8 +1,5 @@
--- Simple Intermediate Model to join activity and activity_types
--- thus providing the friendly name of the activity type
--- Filter out inactive activity types, they are not used in the final report
-
-
+-- Simple intermediate model to join activity and activity_types
+-- thus providing the friendly name of the activity type for downstream models
 SELECT
 	a.user_id,
 	a.deal_id,
