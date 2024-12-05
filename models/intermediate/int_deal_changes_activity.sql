@@ -2,6 +2,8 @@
 -- These will just be the ones with call activities against them
 
 -- Note that there are very few rows compared to the total number of deals
+    -- This is because there are very few matching deal ids in deal_changes and activity tables
+    -- I have looked at whether this can be an out by N error on the ids but didn't find a fix
 -- Potential problem? Why are there so many rows in the activity table with deal ids that don't exist in the deal_changes table?
 
 SELECT
