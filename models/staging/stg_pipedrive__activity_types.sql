@@ -1,5 +1,4 @@
--- This model is generated from the `activity_types` table in the `pipedrive` schema.
--- Renaming a couple of columns to avoid using reserved keywords
+-- Type and Name are reserved keywords. Renaming.
 -- The `active` column is a string with just two possible value. It makes more sense as a bool
 SELECT
     id,

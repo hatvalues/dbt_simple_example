@@ -33,6 +33,8 @@ models:
   enpal_assessment_project:
     marts:
       +materialized: table
+    intermediate:
+      +materialized: ephemeral
     staging:
       +materialized: view
     +schema: pipedrive_analytics
