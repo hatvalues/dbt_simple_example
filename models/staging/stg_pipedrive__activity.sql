@@ -1,6 +1,9 @@
--- This model is a staging table for the activity table in the Pipedrive database.
--- Renaming a couple of columns to avoid using reserved keywords
--- Rename others for consistency with other models: model.id, model.reference_model_id
+-- Type is a reserved keyword. Renaming.
+-- Rename others for consistency with other models
+    -- model.id, model.reference_model_id
+    -- bools are prefixed with is_ or has_
+    -- convert date strings to timestamps and rename
+-- add calculated month fields that will be used downstream
 WITH base_activity AS (
     SELECT
         activity_id AS id,
