@@ -1,4 +1,9 @@
 -- This mart model provides a breakdown by month of all deals and their stages, minor stages, and activities.
+-- The LEFT OUTER JOIN to the deal_changes model ensures that only deals with an add_time event are included in the final report.
+    -- Of course, with different assumptions, we could easily include everything from the activity model.
+    -- but the deals that appear only in the activity table don't have an entry point via the Lead Generation stage
+    -- and that would make the business logic inconsistent.
+    -- A conversation with a stakeholder could lead to a different set of assumptions and a different report.
 WITH  __dbt__cte__int_activity_join_activity_type as (
 -- Simple intermediate model to join activity and activity_types
 -- thus providing the friendly name of the activity type for downstream models
@@ -23,6 +28,8 @@ INNER JOIN "postgres"."public"."minor_stages" ms
 -- These will just be the ones with call activities against them
 
 -- Note that there are very few rows compared to the total number of deals
+    -- This is because there are very few matching deal ids in deal_changes and activity tables
+    -- I have looked at whether this can be an out by N error on the ids but didn't find a fix
 -- Potential problem? Why are there so many rows in the activity table with deal ids that don't exist in the deal_changes table?
 
 SELECT

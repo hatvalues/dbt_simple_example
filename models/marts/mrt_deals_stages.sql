@@ -1,4 +1,9 @@
 -- This mart model provides a breakdown by month of all deals and their stages, minor stages, and activities.
+-- The LEFT OUTER JOIN to the deal_changes model ensures that only deals with an add_time event are included in the final report.
+    -- Of course, with different assumptions, we could easily include everything from the activity model.
+    -- but the deals that appear only in the activity table don't have an entry point via the Lead Generation stage
+    -- and that would make the business logic inconsistent.
+    -- A conversation with a stakeholder could lead to a different set of assumptions and a different report.
 WITH all_deal_changes_and_activity AS (
     SELECT
         deal_id,

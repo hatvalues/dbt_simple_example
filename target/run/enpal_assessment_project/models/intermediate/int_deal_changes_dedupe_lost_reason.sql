@@ -3,7 +3,12 @@
     
     
   as (
-    -- This intermediate model does the following:
+    /* NOT USED UPSTREAM. 
+    The requested report does not call for lost reason information, so this model is not used anywhere upstream.
+	This model is created for completeness and consistent modeling.
+NOT USED UPSTREAM. */
+
+-- This intermediate model does the following:
 	-- Separates the lost reason from the deal_changes model
 	-- Adds the friendly lost reason label to the deal_changes data.
 	-- Deduplicates a handful of dupe deals in the deal_changes model

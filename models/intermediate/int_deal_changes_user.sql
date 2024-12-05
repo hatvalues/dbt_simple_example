@@ -1,6 +1,6 @@
 /* NOT USED UPSTREAM. 
     The requested report does not call for user information, so this model is not used anywhere upstream.
-	This model is created for completeness of the investigative aspects of the task.
+	This model is created for completeness and consistent modeling.
 NOT USED UPSTREAM. */
 
 -- Simple intermediate model to separate the user_id changes from the deal_changes model

@@ -3,7 +3,10 @@
     
     
   as (
-    -- This intermediate model does the following:
+    -- Assumption: the deals in the final report must have an add_time event in the deal changes table.
+	-- This model provides a master set of valid ids to the upstream mart model.
+
+-- This intermediate model does the following:
 	-- Separates new deals from the deal_changes model
 	-- Deduplicates a handful of dupe deals in the deal_changes model
 	  -- Assumption: deals should not have more than one added date

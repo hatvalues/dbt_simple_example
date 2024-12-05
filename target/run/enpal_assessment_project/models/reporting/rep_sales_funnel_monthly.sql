@@ -5,12 +5,17 @@
   as (
     -- ASSUMPTIONS FOR THIS MODEL:
 -- Show the number of deals in each stage of the sales funnel, for each month
+	-- I am presenting a historical view, each deal stage at the time it happened
+	-- (alternative would have been snapshot of final stages of each deal, that's not what I'm doing here)
     -- Although we have models for users, they are not needed/requested in this model
     -- Although we have models for lost deals
         -- we are showing the stage the deal was in at the time of the activity 
         -- whether or not it was closed in the end
         -- If it was not closed in the end, it just doesn't get counted in the Closing or later stages
         -- so it doesn't appear necessary to use the lost reasons model
+	-- As noted in the intermediate model, we are excluding inactive activities
+	-- As noted in the intermediate model, there are hardly any activities with deal_ids also in the deal_changes table
+		-- this results in very entries for steps 2.1 and 3.1 (only two, in fact)
 
 -- create the funnel steps as requested
 WITH funnel_step_from_stages AS (
